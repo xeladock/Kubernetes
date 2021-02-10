@@ -1,0 +1,57 @@
+version: "3"
+services:
+
+     df-wordpress:
+        image: wordpress
+        container_name: df-wordpress
+        restart: always
+        ports:
+            - 8080:80
+        environment:
+           WORDPRESS_DB_HOST: df-maria:3306
+           WORDPRESS_DB_USER: darkfess
+           WORDPRESS_DB_PASSWORD: darkfess
+           WORDPRESS_DB_NAME: dfmaria
+        depends_on:
+            - df-maria
+        networks:
+            - frontend
+            - backend
+        volumes:
+            - wp-content:/var/www/html/wp-content
+
+     df-maria:
+        image: mariadb
+        container_name: df-maria
+        restart: always
+        environment:
+           MYSQL_ROOT_PASSWORD: darkfess
+           MYSQL_USER: darkfess
+           MYSQL_PASSWORD: darkfess
+           MYSQL_DATABASE: dfmaria
+        networks:
+            - backend
+        volumes:
+            - df-mariadata:/var/lib/mysql
+
+     df-phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: df-phpmyadmin
+        restart: always
+        ports:
+            - 8090:80
+        environment:
+           PMA_HOST: df-maria
+        depends_on:
+            - df-maria
+        networks:
+            - frontend
+            - backend
+
+networks:
+  frontend:
+  backend:
+
+volumes:
+  wp-content:
+  df-mariadata:
