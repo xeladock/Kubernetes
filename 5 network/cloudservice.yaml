@@ -1,4 +1,3 @@
-cat cloudprovider.yaml
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
