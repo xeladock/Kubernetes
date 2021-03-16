@@ -1,0 +1,13 @@
+The first request will be processed by the webapp1 deployment.
+
+curl -H "Host: my.kubernetes.example" 192.168.8.250/webapp1
+
+The second request will be processed by the webapp2 deployment.
+
+curl -H "Host: my.kubernetes.example" 192.168.8.250/webapp2
+
+Finally, all other requests will be processed by webapp3 deployment.
+
+curl -H "Host: my.kubernetes.example" 192.168.8.250
+
+

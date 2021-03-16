@@ -1,4 +1,4 @@
-kubectl get deploy DEPLOY_NAME -o yaml --export
+fikubectl get deploy DEPLOY_NAME -o yaml --export
 
 kubectl patch svc NAME_SVC -p '{"spec":{"externalIPs":["192.168.0.194"]}}'
 
@@ -7,5 +7,5 @@ kubectl expose deployment http --external-ip="LOCAL_IP" --port=8000 --target-por
 
 kubectl run httpexposed --image=katacoda/docker-http-server:latest --replicas=1 --port=80 --hostport=8001
 
-
+kubectl api-resources | grep deployment
 
