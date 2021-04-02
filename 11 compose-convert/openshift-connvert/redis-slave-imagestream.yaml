@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: redis-slave
+  name: redis-slave
+spec:
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: gcr.io/google_samples/gb-redisslave:v1
+    generation: null
+    importPolicy: {}
+    name: v1
+status:
+  dockerImageRepository: ""

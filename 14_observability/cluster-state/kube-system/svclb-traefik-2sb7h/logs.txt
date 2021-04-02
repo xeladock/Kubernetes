@@ -1,0 +1,24 @@
+==== START logs for container lb-port-80 of pod kube-system/svclb-traefik-2sb7h ====
++ trap exit TERM INT
+/usr/bin/entry: line 6: can't create /proc/sys/net/ipv4/ip_forward: Read-only file system
++ echo 1
++ true
++ cat /proc/sys/net/ipv4/ip_forward
++ '[' 1 '!=' 1 ]
++ iptables -t nat -I PREROUTING '!' -s 10.43.212.54/32 -p TCP --dport 80 -j DNAT --to 10.43.212.54:80
++ iptables -t nat -I POSTROUTING -d 10.43.212.54/32 -p TCP -j MASQUERADE
++ '[' '!' -e /pause ]
++ mkfifo /pause
+==== END logs for container lb-port-80 of pod kube-system/svclb-traefik-2sb7h ====
+==== START logs for container lb-port-443 of pod kube-system/svclb-traefik-2sb7h ====
++ trap exit TERM INT
+/usr/bin/entry: line 6: can't create /proc/sys/net/ipv4/ip_forward: Read-only file system
++ echo 1
++ true
++ cat /proc/sys/net/ipv4/ip_forward
++ '[' 1 '!=' 1 ]
++ iptables -t nat -I PREROUTING '!' -s 10.43.212.54/32 -p TCP --dport 443 -j DNAT --to 10.43.212.54:443
++ iptables -t nat -I POSTROUTING -d 10.43.212.54/32 -p TCP -j MASQUERADE
++ '[' '!' -e /pause ]
++ mkfifo /pause
+==== END logs for container lb-port-443 of pod kube-system/svclb-traefik-2sb7h ====

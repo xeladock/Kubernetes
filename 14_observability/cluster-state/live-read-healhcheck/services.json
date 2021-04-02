@@ -1,0 +1,89 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484386"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "frontend",
+                "namespace": "live-read-healhcheck",
+                "uid": "25c16ab1-9016-45b8-9af2-317677e6d27b",
+                "resourceVersion": "192031",
+                "creationTimestamp": "2021-03-17T08:28:31Z",
+                "labels": {
+                    "app": "frontend",
+                    "kubernetes.io/cluster-service": "true"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"frontend\",\"kubernetes.io/cluster-service\":\"true\"},\"name\":\"frontend\",\"namespace\":\"live-read-healhcheck\"},\"spec\":{\"ports\":[{\"nodePort\":30006,\"port\":80}],\"selector\":{\"app\":\"frontend\"},\"type\":\"NodePort\"}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-17T08:28:31Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:kubernetes.io/cluster-service": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:nodePort": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30006
+                    }
+                ],
+                "selector": {
+                    "app": "frontend"
+                },
+                "clusterIP": "10.43.53.167",
+                "clusterIPs": [
+                    "10.43.53.167"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

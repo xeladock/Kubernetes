@@ -1,0 +1,1 @@
+kubectl create deployment http-ok --image=katacoda/docker-http-server --dry-run=client -o=yaml > deployment.yaml

@@ -1,0 +1,2 @@
+==== START logs for container lb-port-80 of pod network/svclb-webapp1-loadbalancer-svc-nmq5g ====
+==== END logs for container lb-port-80 of pod network/svclb-webapp1-loadbalancer-svc-nmq5g ====

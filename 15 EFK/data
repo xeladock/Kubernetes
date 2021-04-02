@@ -1,0 +1,14 @@
+kubectl version --short && \
+kubectl get componentstatus && \
+kubectl get nodes && \
+kubectl cluster-info
+
+helm version --short
+
+helm repo add elastic https://helm.elastic.co
+
+helm install elasticsearch elastic/elasticsearch --version=7.9.0 --namespace=efk -f elastic-values.yaml
+helm repo add fluent https://fluent.github.io/helm-charts
+helm install fluent-bit fluent/fluent-bit   --version 0.6.3   --namespace=efk
+helm install kibana elastic/kibana   --version=7.9.0   --namespace=efk   --set service.type=NodePort   --set service.nodePort=31000
+watch kubectl get deployments,pods,services --namespace=efk

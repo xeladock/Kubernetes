@@ -1,0 +1,5 @@
+==== START logs for container nginx-ingress of pod ingress-network/nginx-ingress-7b89c88756-nsccc ====
+I0329 09:07:22.726016       1 main.go:258] Starting NGINX Ingress controller Version=edge GitCommit=22365eb
+W0329 09:07:22.752898       1 main.go:297] The '-use-ingress-class-only' flag will be deprecated and has no effect on versions of kubernetes >= 1.18.0. Processing ONLY resources that have the 'ingressClassName' field in Ingress equal to the class.
+F0329 09:07:22.753992       1 main.go:301] Error when getting IngressClass nginx: ingressclasses.networking.k8s.io "nginx" is forbidden: User "system:serviceaccount:ingress-network:nginx-ingress" cannot get resource "ingressclasses" in API group "networking.k8s.io" at the cluster scope
+==== END logs for container nginx-ingress of pod ingress-network/nginx-ingress-7b89c88756-nsccc ====

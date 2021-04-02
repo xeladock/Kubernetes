@@ -1,0 +1,3 @@
+==== START logs for container frontend of pod live-read-healhcheck/frontend-d6bxk ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container frontend of pod live-read-healhcheck/frontend-d6bxk ====

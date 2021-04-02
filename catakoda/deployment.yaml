@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: http-ok
+  name: http-ok
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: http-ok
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: http-ok
+    spec:
+      containers:
+      - image: katacoda/docker-http-server
+        name: docker-http-server
+        resources: {}
+status: {}

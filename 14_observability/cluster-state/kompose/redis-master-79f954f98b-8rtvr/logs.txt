@@ -1,0 +1,10 @@
+==== START logs for container redis-master of pod kompose/redis-master-79f954f98b-8rtvr ====
+1:C 22 Mar 2021 10:25:15.887 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 22 Mar 2021 10:25:15.888 # Redis version=6.2.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 22 Mar 2021 10:25:15.888 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+1:M 22 Mar 2021 10:25:15.888 * monotonic clock: POSIX clock_gettime
+1:M 22 Mar 2021 10:25:15.889 * Running mode=standalone, port=6379.
+1:M 22 Mar 2021 10:25:15.889 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 22 Mar 2021 10:25:15.889 # Server initialized
+1:M 22 Mar 2021 10:25:15.889 * Ready to accept connections
+==== END logs for container redis-master of pod kompose/redis-master-79f954f98b-8rtvr ====

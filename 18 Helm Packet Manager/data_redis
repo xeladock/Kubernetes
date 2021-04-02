@@ -1,0 +1,4 @@
+helm search hub redis
+helm show chart bitnami/redis
+helm repo search redis
+helm repo add stable https://charts.helm.sh/stable

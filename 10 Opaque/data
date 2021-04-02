@@ -1,0 +1,4 @@
+kubectl exec -it secret-vol-pod -n secret cat /etc/secret-volume/password
+kubectl exec -it secret-vol-pod -n secret cat /etc/secret-volume/password
+kubectl exec -it secret-vol-pod -n secret ls /etc/secret-volume
+kubectl exec -it secret-env-pod -n secret env | grep SECRET_

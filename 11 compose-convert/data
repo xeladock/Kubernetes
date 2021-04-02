@@ -1,0 +1,6 @@
+curl -L https://github.com/kubernetes/kompose/releases/download/v1.9.0/kompose-linux-amd64 -o /usr/bin/kompose && chmod +x /usr/bin/kompose
+kompose convert - konvert to k8s
+
+kompose --provider openshift convert - konvert to openshift
+
+kompose convert -j - konvert to JSON

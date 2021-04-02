@@ -1,0 +1,3 @@
+==== START logs for container bad-frontend of pod live-read-healhcheck/bad-frontend-kc4pd ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container bad-frontend of pod live-read-healhcheck/bad-frontend-kc4pd ====

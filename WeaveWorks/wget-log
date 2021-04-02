@@ -1,0 +1,21 @@
+The name is too long, 684 chars total.
+Trying to shorten...
+New name is net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6.
+--2021-03-17 13:59:55--  https://cloud.weave.works/k8s/net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6IjIwMjEtMDItMjJUMTk6NDk6MjdaIiwgR29WZXJzaW9uOiJnbzEuMTUuOCIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9ClNlcnZlciBWZXJzaW9uOiB2ZXJzaW9uLkluZm97TWFqb3I6IjEiLCBNaW5vcjoiMjAiLCBHaXRWZXJzaW9uOiJ2MS4yMC40K2szczEiLCBHaXRDb21taXQ6IjgzOGE5MDZhYjVlYmE2MmZmNTI5ZDZhM2E3NDYzODRlYmE4MTA3NTgiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDIxLTAyLTIyVDE5OjQ5OjI3WiIsIEdvVmVyc2lvbjoiZ28xLjE1LjgiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQo=
+Распознаётся cloud.weave.works (cloud.weave.works)… 3.226.95.251, 3.213.214.89
+Подключение к cloud.weave.works (cloud.weave.works)|3.226.95.251|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Found
+Адрес: /k8s/v1.16/net.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6IjIwMjEtMDItMjJUMTk6NDk6MjdaIiwgR29WZXJzaW9uOiJnbzEuMTUuOCIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9ClNlcnZlciBWZXJzaW9uOiB2ZXJzaW9uLkluZm97TWFqb3I6IjEiLCBNaW5vcjoiMjAiLCBHaXRWZXJzaW9uOiJ2MS4yMC40K2szczEiLCBHaXRDb21taXQ6IjgzOGE5MDZhYjVlYmE2MmZmNTI5ZDZhM2E3NDYzODRlYmE4MTA3NTgiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDIxLTAyLTIyVDE5OjQ5OjI3WiIsIEdvVmVyc2lvbjoiZ28xLjE1LjgiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQo= [переход]
+The name is too long, 684 chars total.
+Trying to shorten...
+New name is net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6.
+--2021-03-17 13:59:56--  https://cloud.weave.works/k8s/v1.16/net.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6IjIwMjEtMDItMjJUMTk6NDk6MjdaIiwgR29WZXJzaW9uOiJnbzEuMTUuOCIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9ClNlcnZlciBWZXJzaW9uOiB2ZXJzaW9uLkluZm97TWFqb3I6IjEiLCBNaW5vcjoiMjAiLCBHaXRWZXJzaW9uOiJ2MS4yMC40K2szczEiLCBHaXRDb21taXQ6IjgzOGE5MDZhYjVlYmE2MmZmNTI5ZDZhM2E3NDYzODRlYmE4MTA3NTgiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDIxLTAyLTIyVDE5OjQ5OjI3WiIsIEdvVmVyc2lvbjoiZ28xLjE1LjgiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQo=
+Повторное использование соединения с cloud.weave.works:443.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 11756 (11K) [application/x-yaml]
+Сохранение в: «net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6»
+
+                        net?k8s-version=Q2xpZW5   0%[                                                                                                        ]       0  --.-KB/s               net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24 100%[=======================================================================================================>]  11,48K  --.-KB/s    за 0s      
+
+2021-03-17 13:59:56 (258 MB/s) - «net?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6» сохранён [11756/11756]
+

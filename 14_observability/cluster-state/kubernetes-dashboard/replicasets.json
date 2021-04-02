@@ -1,0 +1,534 @@
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "484383"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "dashboard-metrics-scraper-79c5968bdc",
+                "namespace": "kubernetes-dashboard",
+                "uid": "ee318dbe-2ff3-4529-ada1-2817c613e362",
+                "resourceVersion": "151562",
+                "generation": 1,
+                "creationTimestamp": "2021-03-10T11:05:24Z",
+                "labels": {
+                    "k8s-app": "dashboard-metrics-scraper",
+                    "pod-template-hash": "79c5968bdc"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "dashboard-metrics-scraper",
+                        "uid": "9869e184-7158-42fb-b480-5b31577f6304",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ],
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-15T14:14:03Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:deployment.kubernetes.io/desired-replicas": {},
+                                    "f:deployment.kubernetes.io/max-replicas": {},
+                                    "f:deployment.kubernetes.io/revision": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:k8s-app": {},
+                                    "f:pod-template-hash": {}
+                                },
+                                "f:ownerReferences": {
+                                    ".": {},
+                                    "k:{\"uid\":\"9869e184-7158-42fb-b480-5b31577f6304\"}": {
+                                        ".": {},
+                                        "f:apiVersion": {},
+                                        "f:blockOwnerDeletion": {},
+                                        "f:controller": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {},
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:annotations": {
+                                            ".": {},
+                                            "f:seccomp.security.alpha.kubernetes.io/pod": {}
+                                        },
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:k8s-app": {},
+                                            "f:pod-template-hash": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"dashboard-metrics-scraper\"}": {
+                                                ".": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:livenessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":8000,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:allowPrivilegeEscalation": {},
+                                                    "f:readOnlyRootFilesystem": {},
+                                                    "f:runAsGroup": {},
+                                                    "f:runAsUser": {}
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/tmp\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:nodeSelector": {
+                                            ".": {},
+                                            "f:kubernetes.io/os": {}
+                                        },
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:serviceAccount": {},
+                                        "f:serviceAccountName": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:tolerations": {},
+                                        "f:volumes": {
+                                            ".": {},
+                                            "k:{\"name\":\"tmp-volume\"}": {
+                                                ".": {},
+                                                "f:emptyDir": {},
+                                                "f:name": {}
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "dashboard-metrics-scraper",
+                        "pod-template-hash": "79c5968bdc"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "k8s-app": "dashboard-metrics-scraper",
+                            "pod-template-hash": "79c5968bdc"
+                        },
+                        "annotations": {
+                            "seccomp.security.alpha.kubernetes.io/pod": "runtime/default"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "tmp-volume",
+                                "emptyDir": {}
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "dashboard-metrics-scraper",
+                                "image": "kubernetesui/metrics-scraper:v1.0.6",
+                                "ports": [
+                                    {
+                                        "containerPort": 8000,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "tmp-volume",
+                                        "mountPath": "/tmp"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 8000,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 30,
+                                    "timeoutSeconds": 30,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "runAsUser": 1001,
+                                    "runAsGroup": 2001,
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "kubernetes-dashboard",
+                        "serviceAccount": "kubernetes-dashboard",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "effect": "NoSchedule"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "kubernetes-dashboard-9f9799597",
+                "namespace": "kubernetes-dashboard",
+                "uid": "fdc0db26-8068-4c5b-9351-b36e51728900",
+                "resourceVersion": "151798",
+                "generation": 1,
+                "creationTimestamp": "2021-03-10T11:05:24Z",
+                "labels": {
+                    "k8s-app": "kubernetes-dashboard",
+                    "pod-template-hash": "9f9799597"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "kubernetes-dashboard",
+                        "uid": "0d05d679-46a1-40a6-9942-07f9012fea27",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ],
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-15T14:15:30Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:deployment.kubernetes.io/desired-replicas": {},
+                                    "f:deployment.kubernetes.io/max-replicas": {},
+                                    "f:deployment.kubernetes.io/revision": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:k8s-app": {},
+                                    "f:pod-template-hash": {}
+                                },
+                                "f:ownerReferences": {
+                                    ".": {},
+                                    "k:{\"uid\":\"0d05d679-46a1-40a6-9942-07f9012fea27\"}": {
+                                        ".": {},
+                                        "f:apiVersion": {},
+                                        "f:blockOwnerDeletion": {},
+                                        "f:controller": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {},
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:k8s-app": {},
+                                            "f:pod-template-hash": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"kubernetes-dashboard\"}": {
+                                                ".": {},
+                                                "f:args": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:livenessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:allowPrivilegeEscalation": {},
+                                                    "f:readOnlyRootFilesystem": {},
+                                                    "f:runAsGroup": {},
+                                                    "f:runAsUser": {}
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/certs\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/tmp\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:nodeSelector": {
+                                            ".": {},
+                                            "f:kubernetes.io/os": {}
+                                        },
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:serviceAccount": {},
+                                        "f:serviceAccountName": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:tolerations": {},
+                                        "f:volumes": {
+                                            ".": {},
+                                            "k:{\"name\":\"kubernetes-dashboard-certs\"}": {
+                                                ".": {},
+                                                "f:name": {},
+                                                "f:secret": {
+                                                    ".": {},
+                                                    "f:defaultMode": {},
+                                                    "f:secretName": {}
+                                                }
+                                            },
+                                            "k:{\"name\":\"tmp-volume\"}": {
+                                                ".": {},
+                                                "f:emptyDir": {},
+                                                "f:name": {}
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "kubernetes-dashboard",
+                        "pod-template-hash": "9f9799597"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "k8s-app": "kubernetes-dashboard",
+                            "pod-template-hash": "9f9799597"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "kubernetes-dashboard-certs",
+                                "secret": {
+                                    "secretName": "kubernetes-dashboard-certs",
+                                    "defaultMode": 420
+                                }
+                            },
+                            {
+                                "name": "tmp-volume",
+                                "emptyDir": {}
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "kubernetes-dashboard",
+                                "image": "kubernetesui/dashboard:v2.2.0",
+                                "args": [
+                                    "--auto-generate-certificates",
+                                    "--namespace=kubernetes-dashboard"
+                                ],
+                                "ports": [
+                                    {
+                                        "containerPort": 8443,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "kubernetes-dashboard-certs",
+                                        "mountPath": "/certs"
+                                    },
+                                    {
+                                        "name": "tmp-volume",
+                                        "mountPath": "/tmp"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 8443,
+                                        "scheme": "HTTPS"
+                                    },
+                                    "initialDelaySeconds": 30,
+                                    "timeoutSeconds": 30,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "Always",
+                                "securityContext": {
+                                    "runAsUser": 1001,
+                                    "runAsGroup": 2001,
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "kubernetes-dashboard",
+                        "serviceAccount": "kubernetes-dashboard",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "effect": "NoSchedule"
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}

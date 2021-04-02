@@ -1,0 +1,8 @@
+==== START logs for container php-redis of pod default/frontend-bsz9t ====
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.42.0.67. Set the 'ServerName' directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.42.0.67. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 15 14:15:16.535454 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.10 (Debian) PHP/5.6.12 configured -- resuming normal operations
+[Mon Mar 15 14:15:16.535494 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+10.42.0.1 - - [17/Mar/2021:09:39:48 +0000] "GET /favicon.ico HTTP/1.1" 404 437 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:51 +0000] "GET /guestbook.php?cmd=set&key=messages&value=,12,23,34 HTTP/1.1" 200 254 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36"
+==== END logs for container php-redis of pod default/frontend-bsz9t ====

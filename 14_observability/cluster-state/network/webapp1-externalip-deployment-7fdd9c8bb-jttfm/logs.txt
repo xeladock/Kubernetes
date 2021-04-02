@@ -1,0 +1,3 @@
+==== START logs for container webapp1-externalip-pod of pod network/webapp1-externalip-deployment-7fdd9c8bb-jttfm ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container webapp1-externalip-pod of pod network/webapp1-externalip-deployment-7fdd9c8bb-jttfm ====

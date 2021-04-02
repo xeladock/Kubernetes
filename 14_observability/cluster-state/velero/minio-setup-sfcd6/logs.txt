@@ -1,0 +1,4 @@
+==== START logs for container mc of pod velero/minio-setup-sfcd6 ====
+Added `velero` successfully.
+Bucket created successfully `velero/velero`.
+==== END logs for container mc of pod velero/minio-setup-sfcd6 ====

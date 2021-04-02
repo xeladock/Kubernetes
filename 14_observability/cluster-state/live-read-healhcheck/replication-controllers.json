@@ -1,0 +1,367 @@
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484386"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "bad-frontend",
+                "namespace": "live-read-healhcheck",
+                "uid": "ead57a62-1c5b-40f2-9cd7-bfe2d1e6d7cd",
+                "resourceVersion": "192035",
+                "generation": 1,
+                "creationTimestamp": "2021-03-17T08:28:31Z",
+                "labels": {
+                    "name": "bad-frontend"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"ReplicationController\",\"metadata\":{\"annotations\":{},\"labels\":{\"name\":\"bad-frontend\"},\"name\":\"bad-frontend\",\"namespace\":\"live-read-healhcheck\"},\"spec\":{\"replicas\":1,\"selector\":{\"name\":\"bad-frontend\"},\"template\":{\"metadata\":{\"labels\":{\"name\":\"bad-frontend\"}},\"spec\":{\"containers\":[{\"image\":\"katacoda/docker-http-server:unhealthy\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/\",\"port\":80},\"initialDelaySeconds\":1,\"timeoutSeconds\":1},\"name\":\"bad-frontend\",\"readinessProbe\":{\"httpGet\":{\"path\":\"/\",\"port\":80},\"initialDelaySeconds\":1,\"timeoutSeconds\":1}}]}}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-17T08:28:31Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    },
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-17T08:28:31Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {}
+                                },
+                                "f:template": {
+                                    ".": {},
+                                    "f:metadata": {
+                                        ".": {},
+                                        "f:creationTimestamp": {},
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        ".": {},
+                                        "f:containers": {
+                                            ".": {},
+                                            "k:{\"name\":\"bad-frontend\"}": {
+                                                ".": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:livenessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:name": {},
+                                                "f:readinessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "name": "bad-frontend"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "bad-frontend"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "bad-frontend",
+                                "image": "katacoda/docker-http-server:unhealthy",
+                                "resources": {},
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 80,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 1,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 80,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 1,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "frontend",
+                "namespace": "live-read-healhcheck",
+                "uid": "7df28a44-5873-4438-b1fe-0275cee990a4",
+                "resourceVersion": "246451",
+                "generation": 1,
+                "creationTimestamp": "2021-03-17T08:28:31Z",
+                "labels": {
+                    "name": "frontend"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"ReplicationController\",\"metadata\":{\"annotations\":{},\"labels\":{\"name\":\"frontend\"},\"name\":\"frontend\",\"namespace\":\"live-read-healhcheck\"},\"spec\":{\"replicas\":1,\"selector\":{\"name\":\"frontend\"},\"template\":{\"metadata\":{\"labels\":{\"name\":\"frontend\"}},\"spec\":{\"containers\":[{\"image\":\"katacoda/docker-http-server:health\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/\",\"port\":80},\"initialDelaySeconds\":1,\"timeoutSeconds\":1},\"name\":\"frontend\",\"readinessProbe\":{\"httpGet\":{\"path\":\"/\",\"port\":80},\"initialDelaySeconds\":1,\"timeoutSeconds\":1}}]}}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-17T08:28:31Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {}
+                                },
+                                "f:template": {
+                                    ".": {},
+                                    "f:metadata": {
+                                        ".": {},
+                                        "f:creationTimestamp": {},
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        ".": {},
+                                        "f:containers": {
+                                            ".": {},
+                                            "k:{\"name\":\"frontend\"}": {
+                                                ".": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:livenessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:name": {},
+                                                "f:readinessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:initialDelaySeconds": {},
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-19T04:57:41Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "name": "frontend"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "frontend"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "frontend",
+                                "image": "katacoda/docker-http-server:health",
+                                "resources": {},
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 80,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 1,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/",
+                                        "port": 80,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 1,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}

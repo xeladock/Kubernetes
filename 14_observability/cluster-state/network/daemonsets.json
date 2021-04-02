@@ -1,0 +1,262 @@
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "484385"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "svclb-webapp1-loadbalancer-svc",
+                "namespace": "network",
+                "uid": "b426c9d9-d2bb-436b-8030-bb063c0dd128",
+                "resourceVersion": "153288",
+                "generation": 1,
+                "creationTimestamp": "2021-03-15T14:50:08Z",
+                "labels": {
+                    "objectset.rio.cattle.io/hash": "94f6d367bbb8d562c230a979789d5626682cb8b6",
+                    "svccontroller.k3s.cattle.io/nodeselector": "false"
+                },
+                "annotations": {
+                    "deprecated.daemonset.template.generation": "1",
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/5xUUU/jOBD+K6d5dkKbltJGuocV8IDuFqq2ey8IoYk9pb46tmVPAlWV/35yYLdlddDVPmY88/nz932ZPWy1VVDCFVLt7JIYBKDX/1CI2lkoAb2PZ+0QBNTEqJARyj1YrAlKiK00VfZMFXo/zIxDVaFBKylksZUg+r7oUaZmS/zswhYEyEDI2tmVriky1h5K2xgjwGBFJqYLXPUvSY7EedAul8hsKNfubINxAyXMxuuJGk0uqqqaqvNJIYvRAGcXs4vpLH1OJtNCVtNqAiJxlM5ycMZQyLejeIRmnaJIhiS7ACWs0USCTgBa67in+CkZrV41OOCD+LDZPVsK2VO7hRLO2qH44y9t1Z9LCq2WdHLuTfBPpD49/7MRnYD+cEFrCmQlRSjv9+/t751/y8iB62k2Ta/NxVrJqTofZcOxomx8LmfZbFqcZ4U8H8txsVZqNkp5OOhXcmioe+gERE8yiX/wZw81stz8/SMk6P3pEHadAKbaG2TqMY5i/AtB/KU7Pk9ZbOUpwbqjBycc1JbCqx1vo6bKvAucTQcgQNf4lIoBrdxQONsa7T2FzFRlO8iHeQECUvfHCBsXee4CQzkdiMOVh5IPjp10BkpYXc6hexBAtj3GWy4uH+d3ixUIaNE0qTQdQCd+NFxdL1eP88Xd6u6opQf7ueckys386Hw4yMejfDgc5EVR9MwCRdeEPsD77k2eeWPM3Bktd1DCzfrW8TxQJJs2XCTZBM27S2eZXrhXHT1W2mjW9Oq7UlDew+316vHL1debW3jounQVO0Ph+2q438OWEn5aJFlwhvJtU1GwxBST9TVGft0KPk31W+b6RUeOIIDWa5IMJdy6pdyQagz1D/8c8i1mmTdo6beQL4NmLdF8UcrZeGfN7n9huoeUysYrZFpyQKanXVKGdz65sHDGaPv0rT8HAeHdd/+zvnyz2KI2WBmCctj1KWfkpldYNiGQ5dumrih8p6mgHAiwfe2rjvFdWVHUgdTHEwtCtYNy0HX/BQAA//884D412QYAAA",
+                    "objectset.rio.cattle.io/id": "svccontroller",
+                    "objectset.rio.cattle.io/owner-gvk": "/v1, Kind=Service",
+                    "objectset.rio.cattle.io/owner-name": "webapp1-loadbalancer-svc",
+                    "objectset.rio.cattle.io/owner-namespace": "network"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "kind": "Service",
+                        "name": "webapp1-loadbalancer-svc",
+                        "uid": "7fdc8d53-14de-45c9-9825-2c54c42fdd93",
+                        "controller": true
+                    }
+                ],
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-15T14:50:08Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:deprecated.daemonset.template.generation": {},
+                                    "f:objectset.rio.cattle.io/applied": {},
+                                    "f:objectset.rio.cattle.io/id": {},
+                                    "f:objectset.rio.cattle.io/owner-gvk": {},
+                                    "f:objectset.rio.cattle.io/owner-name": {},
+                                    "f:objectset.rio.cattle.io/owner-namespace": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:objectset.rio.cattle.io/hash": {},
+                                    "f:svccontroller.k3s.cattle.io/nodeselector": {}
+                                },
+                                "f:ownerReferences": {
+                                    ".": {},
+                                    "k:{\"uid\":\"7fdc8d53-14de-45c9-9825-2c54c42fdd93\"}": {
+                                        ".": {},
+                                        "f:apiVersion": {},
+                                        "f:controller": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "f:spec": {
+                                "f:revisionHistoryLimit": {},
+                                "f:selector": {},
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:app": {},
+                                            "f:svccontroller.k3s.cattle.io/svcname": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"lb-port-80\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"DEST_IP\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PROTO\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"SRC_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":80,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:hostPort": {},
+                                                        "f:name": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:capabilities": {
+                                                        ".": {},
+                                                        "f:add": {}
+                                                    }
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:tolerations": {}
+                                    }
+                                },
+                                "f:updateStrategy": {
+                                    "f:rollingUpdate": {
+                                        ".": {},
+                                        "f:maxUnavailable": {}
+                                    },
+                                    "f:type": {}
+                                }
+                            },
+                            "f:status": {
+                                "f:currentNumberScheduled": {},
+                                "f:desiredNumberScheduled": {},
+                                "f:numberUnavailable": {},
+                                "f:observedGeneration": {},
+                                "f:updatedNumberScheduled": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "selector": {
+                    "matchLabels": {
+                        "app": "svclb-webapp1-loadbalancer-svc"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "svclb-webapp1-loadbalancer-svc",
+                            "svccontroller.k3s.cattle.io/svcname": "webapp1-loadbalancer-svc"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "lb-port-80",
+                                "image": "rancher/klipper-lb:v0.1.2",
+                                "ports": [
+                                    {
+                                        "name": "lb-port-80",
+                                        "hostPort": 80,
+                                        "containerPort": 80,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "SRC_PORT",
+                                        "value": "80"
+                                    },
+                                    {
+                                        "name": "DEST_PROTO",
+                                        "value": "TCP"
+                                    },
+                                    {
+                                        "name": "DEST_PORT",
+                                        "value": "80"
+                                    },
+                                    {
+                                        "name": "DEST_IP",
+                                        "value": "10.43.110.222"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_ADMIN"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/control-plane",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            }
+                        ]
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": 1
+                    }
+                },
+                "revisionHistoryLimit": 10
+            },
+            "status": {
+                "currentNumberScheduled": 1,
+                "numberMisscheduled": 0,
+                "desiredNumberScheduled": 1,
+                "numberReady": 0,
+                "observedGeneration": 1,
+                "updatedNumberScheduled": 1,
+                "numberUnavailable": 1
+            }
+        }
+    ]
+}

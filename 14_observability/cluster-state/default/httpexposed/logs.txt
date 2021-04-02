@@ -1,0 +1,3 @@
+==== START logs for container httpexposed of pod default/httpexposed ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container httpexposed of pod default/httpexposed ====

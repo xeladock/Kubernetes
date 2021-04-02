@@ -1,0 +1,249 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484389"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "frontend",
+                "namespace": "kompose",
+                "uid": "92dfd8d1-845d-4372-8b31-e3c23bb1e159",
+                "resourceVersion": "326188",
+                "creationTimestamp": "2021-03-22T09:15:34Z",
+                "labels": {
+                    "io.kompose.service": "frontend"
+                },
+                "annotations": {
+                    "kompose.cmd": "kompose convert",
+                    "kompose.version": "1.9.0 (093c756)",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"kompose.cmd\":\"kompose convert\",\"kompose.version\":\"1.9.0 (093c756)\"},\"creationTimestamp\":null,\"labels\":{\"io.kompose.service\":\"frontend\"},\"name\":\"frontend\",\"namespace\":\"kompose\"},\"spec\":{\"ports\":[{\"name\":\"80\",\"port\":80,\"targetPort\":80}],\"selector\":{\"io.kompose.service\":\"frontend\"}},\"status\":{\"loadBalancer\":{}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-22T09:15:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kompose.cmd": {},
+                                    "f:kompose.version": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "80",
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "io.kompose.service": "frontend"
+                },
+                "clusterIP": "10.43.73.4",
+                "clusterIPs": [
+                    "10.43.73.4"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "redis-master",
+                "namespace": "kompose",
+                "uid": "0110c2dd-2010-4598-91d0-546caf47e52b",
+                "resourceVersion": "326192",
+                "creationTimestamp": "2021-03-22T09:15:34Z",
+                "labels": {
+                    "io.kompose.service": "redis-master"
+                },
+                "annotations": {
+                    "kompose.cmd": "kompose convert",
+                    "kompose.version": "1.9.0 (093c756)",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"kompose.cmd\":\"kompose convert\",\"kompose.version\":\"1.9.0 (093c756)\"},\"creationTimestamp\":null,\"labels\":{\"io.kompose.service\":\"redis-master\"},\"name\":\"redis-master\",\"namespace\":\"kompose\"},\"spec\":{\"ports\":[{\"name\":\"6379\",\"port\":6379,\"targetPort\":6379}],\"selector\":{\"io.kompose.service\":\"redis-master\"}},\"status\":{\"loadBalancer\":{}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-22T09:15:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kompose.cmd": {},
+                                    "f:kompose.version": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "6379",
+                        "protocol": "TCP",
+                        "port": 6379,
+                        "targetPort": 6379
+                    }
+                ],
+                "selector": {
+                    "io.kompose.service": "redis-master"
+                },
+                "clusterIP": "10.43.53.110",
+                "clusterIPs": [
+                    "10.43.53.110"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "redis-slave",
+                "namespace": "kompose",
+                "uid": "3e101d20-0952-4740-90f0-107ae2652caf",
+                "resourceVersion": "326194",
+                "creationTimestamp": "2021-03-22T09:15:34Z",
+                "labels": {
+                    "io.kompose.service": "redis-slave"
+                },
+                "annotations": {
+                    "kompose.cmd": "kompose convert",
+                    "kompose.version": "1.9.0 (093c756)",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"kompose.cmd\":\"kompose convert\",\"kompose.version\":\"1.9.0 (093c756)\"},\"creationTimestamp\":null,\"labels\":{\"io.kompose.service\":\"redis-slave\"},\"name\":\"redis-slave\",\"namespace\":\"kompose\"},\"spec\":{\"ports\":[{\"name\":\"6379\",\"port\":6379,\"targetPort\":6379}],\"selector\":{\"io.kompose.service\":\"redis-slave\"}},\"status\":{\"loadBalancer\":{}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-22T09:15:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kompose.cmd": {},
+                                    "f:kompose.version": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:io.kompose.service": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "6379",
+                        "protocol": "TCP",
+                        "port": 6379,
+                        "targetPort": 6379
+                    }
+                ],
+                "selector": {
+                    "io.kompose.service": "redis-slave"
+                },
+                "clusterIP": "10.43.196.149",
+                "clusterIPs": [
+                    "10.43.196.149"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

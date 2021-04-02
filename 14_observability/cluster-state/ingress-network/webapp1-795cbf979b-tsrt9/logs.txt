@@ -1,0 +1,3 @@
+==== START logs for container webapp1 of pod ingress-network/webapp1-795cbf979b-tsrt9 ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container webapp1 of pod ingress-network/webapp1-795cbf979b-tsrt9 ====

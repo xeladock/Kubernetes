@@ -1,0 +1,71 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484385"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "svclb-webapp1-loadbalancer-svc-nmq5g.166c8b8e033febd8",
+                "namespace": "network",
+                "uid": "14c26862-e2ca-43c1-89a7-1ce99545f79b",
+                "resourceVersion": "483147",
+                "creationTimestamp": "2021-03-15T14:50:08Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "events.k8s.io/v1",
+                        "time": "2021-03-15T14:51:18Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:action": {},
+                            "f:eventTime": {},
+                            "f:note": {},
+                            "f:reason": {},
+                            "f:regarding": {
+                                "f:apiVersion": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:reportingController": {},
+                            "f:reportingInstance": {},
+                            "f:series": {
+                                ".": {},
+                                "f:count": {},
+                                "f:lastObservedTime": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "network",
+                "name": "svclb-webapp1-loadbalancer-svc-nmq5g",
+                "uid": "adc70ed1-f827-48bd-aae8-248030648c5a",
+                "apiVersion": "v1",
+                "resourceVersion": "153286"
+            },
+            "reason": "FailedScheduling",
+            "message": "0/1 nodes are available: 1 node(s) didn't have free ports for the requested pod ports.",
+            "source": {},
+            "firstTimestamp": null,
+            "lastTimestamp": null,
+            "type": "Warning",
+            "eventTime": "2021-03-15T14:50:08.375299Z",
+            "series": {
+                "count": 5584,
+                "lastObservedTime": "2021-03-29T08:40:37.333904Z"
+            },
+            "action": "Scheduling",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-PC"
+        }
+    ]
+}

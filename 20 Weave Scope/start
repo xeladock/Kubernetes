@@ -1,2 +1,0 @@
-pod=$(kubectl get pod -n weave --selector=name=weave-scope-app -o jsonpath={.items..metadata.name})
-kubectl expose pod $pod -n weave --external-ip="172.17.0.70" --port=4040 --target-port=4040

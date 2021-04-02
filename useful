@@ -9,3 +9,7 @@ kubectl run httpexposed --image=katacoda/docker-http-server:latest --replicas=1 
 
 kubectl api-resources | grep deployment
 
+kube exec -ti weave-net-8blq5 -n kube-system -- pwd
+kube exec -ti weave-net-8blq5 -n kube-system -- sh -c ls
+kube exec -ti weave-net-8blq5 -n kube-system sh
+kube exec --stdin --tty weave-net-8blq5 -n kube-system -- /bin/sh

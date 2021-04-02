@@ -1,0 +1,303 @@
+==== START logs for container master of pod default/redis-master-xlvrc ====
+1:C 15 Mar 14:14:35.615 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.0.7 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 1
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+1:M 15 Mar 14:14:35.959 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 15 Mar 14:14:35.959 # Server started, Redis version 3.0.7
+1:M 15 Mar 14:14:35.959 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 15 Mar 14:14:35.960 * The server is now ready to accept connections on port 6379
+1:M 15 Mar 14:14:42.508 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 15 Mar 14:14:42.508 * Full resync requested by slave 10.42.0.74:6379
+1:M 15 Mar 14:14:42.508 * Starting BGSAVE for SYNC with target: disk
+1:M 15 Mar 14:14:42.508 * Background saving started by pid 12
+12:C 15 Mar 14:14:49.785 * DB saved on disk
+12:C 15 Mar 14:14:49.785 * RDB: 0 MB of memory used by copy-on-write
+1:M 15 Mar 14:14:49.855 * Background saving terminated with success
+1:M 15 Mar 14:14:49.855 * Synchronization with slave 10.42.0.74:6379 succeeded
+1:M 15 Mar 14:14:50.183 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 15 Mar 14:14:50.183 * Full resync requested by slave 10.42.0.86:6379
+1:M 15 Mar 14:14:50.183 * Starting BGSAVE for SYNC with target: disk
+1:M 15 Mar 14:14:50.183 * Background saving started by pid 13
+13:C 15 Mar 14:14:50.796 * DB saved on disk
+13:C 15 Mar 14:14:50.797 * RDB: 0 MB of memory used by copy-on-write
+1:M 15 Mar 14:14:50.858 * Background saving terminated with success
+1:M 15 Mar 14:14:50.858 * Synchronization with slave 10.42.0.86:6379 succeeded
+1:M 15 Mar 16:37:39.540 # Connection with slave 10.42.0.86:6379 lost.
+1:M 15 Mar 16:37:39.541 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 15 Mar 16:37:39.541 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 8724.
+1:M 15 Mar 16:37:39.739 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 15 Mar 16:37:39.739 # Connection with slave 10.42.0.74:6379 lost.
+1:M 15 Mar 16:37:39.941 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 15 Mar 16:37:39.941 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 8724.
+1:M 15 Mar 18:44:52.596 # Connection with slave 10.42.0.74:6379 lost.
+1:M 15 Mar 18:44:52.597 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 15 Mar 18:44:52.597 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 15388.
+1:M 15 Mar 18:44:53.100 # Connection with slave 10.42.0.86:6379 lost.
+1:M 15 Mar 18:44:53.101 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 15 Mar 18:44:53.101 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 15388.
+1:M 16 Mar 05:18:55.586 # Connection with slave 10.42.0.74:6379 lost.
+1:M 16 Mar 05:18:55.587 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 16 Mar 05:18:55.587 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 16088.
+1:M 16 Mar 05:18:56.089 # Connection with slave 10.42.0.86:6379 lost.
+1:M 16 Mar 05:18:56.089 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 16 Mar 05:18:56.089 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 16088.
+1:M 16 Mar 16:05:51.566 # Connection with slave 10.42.0.86:6379 lost.
+1:M 16 Mar 16:05:51.766 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 16 Mar 16:05:51.766 # Connection with slave 10.42.0.74:6379 lost.
+1:M 16 Mar 16:05:59.206 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 16 Mar 16:05:59.206 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 14 bytes of backlog starting from offset 54630.
+1:M 16 Mar 16:05:59.206 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 16 Mar 16:05:59.206 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 14 bytes of backlog starting from offset 54630.
+1:M 17 Mar 05:01:55.929 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 17 Mar 05:01:55.929 # Connection with slave 10.42.0.86:6379 lost.
+1:M 17 Mar 05:01:55.929 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 17 Mar 05:01:55.929 # Connection with slave 10.42.0.74:6379 lost.
+1:M 17 Mar 05:01:56.331 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 17 Mar 05:01:56.331 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 63156.
+1:M 17 Mar 05:01:56.333 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 17 Mar 05:01:56.333 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 63156.
+1:M 17 Mar 05:48:13.464 # Connection with slave 10.42.0.86:6379 lost.
+1:M 17 Mar 05:48:13.465 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 17 Mar 05:48:13.465 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 65116.
+1:M 17 Mar 05:48:13.465 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 17 Mar 05:48:13.465 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 65116.
+1:M 17 Mar 05:48:13.671 # Connection with slave 10.42.0.74:6379 lost.
+1:M 17 Mar 09:39:37.201 * 1 changes in 3600 seconds. Saving...
+1:M 17 Mar 09:39:37.202 * Background saving started by pid 14
+14:C 17 Mar 09:39:37.248 * DB saved on disk
+14:C 17 Mar 09:39:37.249 * RDB: 0 MB of memory used by copy-on-write
+1:M 17 Mar 09:39:37.302 * Background saving terminated with success
+1:M 17 Mar 10:39:38.001 * 1 changes in 3600 seconds. Saving...
+1:M 17 Mar 10:39:38.001 * Background saving started by pid 15
+15:C 17 Mar 10:39:38.031 * DB saved on disk
+15:C 17 Mar 10:39:38.032 * RDB: 0 MB of memory used by copy-on-write
+1:M 17 Mar 10:39:38.102 * Background saving terminated with success
+1:M 17 Mar 18:15:55.389 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 17 Mar 18:15:55.389 # Connection with slave 10.42.0.74:6379 lost.
+1:M 17 Mar 18:15:55.390 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 17 Mar 18:16:02.121 # Connection with slave 10.42.0.86:6379 lost.
+1:M 17 Mar 18:16:04.490 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 17 Mar 18:16:04.490 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 121850.
+1:M 17 Mar 18:16:04.515 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 17 Mar 18:16:04.515 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 121850.
+1:M 18 Mar 04:49:59.372 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 18 Mar 04:49:59.372 # Connection with slave 10.42.0.74:6379 lost.
+1:M 18 Mar 04:49:59.372 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 18 Mar 04:49:59.372 # Connection with slave 10.42.0.86:6379 lost.
+1:M 18 Mar 04:49:59.774 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 18 Mar 04:49:59.774 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 124412.
+1:M 18 Mar 04:49:59.779 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 18 Mar 04:49:59.780 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 124412.
+1:M 18 Mar 15:51:19.393 # Connection with slave 10.42.0.86:6379 lost.
+1:M 18 Mar 15:51:19.401 # Connection with slave 10.42.0.74:6379 lost.
+1:M 18 Mar 15:51:29.890 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 18 Mar 15:51:29.890 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 163360.
+1:M 18 Mar 15:51:29.890 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 18 Mar 15:51:29.890 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 163360.
+1:M 19 Mar 04:53:44.289 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 19 Mar 04:53:44.289 # Connection with slave 10.42.0.74:6379 lost.
+1:M 19 Mar 04:53:44.289 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 19 Mar 04:53:44.289 # Connection with slave 10.42.0.86:6379 lost.
+1:M 19 Mar 04:53:54.075 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 19 Mar 04:53:54.075 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 14 bytes of backlog starting from offset 178564.
+1:M 19 Mar 04:53:54.075 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 19 Mar 04:53:54.075 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 14 bytes of backlog starting from offset 178564.
+1:M 19 Mar 16:51:32.309 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 19 Mar 16:51:32.309 # Connection with slave 10.42.0.86:6379 lost.
+1:M 19 Mar 16:51:38.476 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 19 Mar 16:51:38.476 # Connection with slave 10.42.0.74:6379 lost.
+1:M 19 Mar 16:51:42.136 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 19 Mar 16:51:42.136 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 14 bytes of backlog starting from offset 231022.
+1:M 19 Mar 16:51:42.136 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 19 Mar 16:51:42.136 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 14 bytes of backlog starting from offset 231022.
+1:M 20 Mar 11:06:34.301 # Connection with slave 10.42.0.86:6379 lost.
+1:M 20 Mar 11:06:34.301 # Connection with slave 10.42.0.74:6379 lost.
+1:M 20 Mar 11:06:38.109 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 20 Mar 11:06:38.110 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 245386.
+1:M 20 Mar 11:06:38.110 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 20 Mar 11:06:38.110 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 245386.
+1:M 20 Mar 17:30:27.585 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 20 Mar 17:30:27.585 # Connection with slave 10.42.0.74:6379 lost.
+1:M 20 Mar 17:30:27.585 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 20 Mar 17:30:27.585 # Connection with slave 10.42.0.86:6379 lost.
+1:M 20 Mar 17:30:36.261 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 20 Mar 17:30:36.261 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 14 bytes of backlog starting from offset 272700.
+1:M 20 Mar 17:30:36.261 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 20 Mar 17:30:36.261 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 14 bytes of backlog starting from offset 272700.
+1:M 21 Mar 09:19:56.666 # Connection with slave 10.42.0.86:6379 lost.
+1:M 21 Mar 09:19:56.666 # Connection with slave 10.42.0.74:6379 lost.
+1:M 21 Mar 09:20:00.468 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 21 Mar 09:20:00.468 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 285846.
+1:M 21 Mar 09:20:00.468 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 21 Mar 09:20:00.468 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 285846.
+1:M 21 Mar 09:33:49.796 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 21 Mar 09:33:49.796 # Connection with slave 10.42.0.74:6379 lost.
+1:M 21 Mar 09:33:49.796 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 21 Mar 09:33:49.796 # Connection with slave 10.42.0.86:6379 lost.
+1:M 21 Mar 09:33:50.297 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 21 Mar 09:33:50.297 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 286700.
+1:M 21 Mar 09:33:50.297 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 21 Mar 09:33:50.298 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 286700.
+1:M 21 Mar 10:13:31.359 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 21 Mar 10:13:31.359 # Connection with slave 10.42.0.74:6379 lost.
+1:M 21 Mar 10:13:31.359 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 21 Mar 10:13:31.359 # Connection with slave 10.42.0.86:6379 lost.
+1:M 21 Mar 10:13:31.861 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 21 Mar 10:13:31.861 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 287148.
+1:M 21 Mar 10:13:31.861 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 21 Mar 10:13:31.861 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 287148.
+1:M 21 Mar 13:07:22.548 # Connection with slave 10.42.0.74:6379 lost.
+1:M 21 Mar 13:07:22.548 # Connection with slave 10.42.0.86:6379 lost.
+1:M 21 Mar 13:07:22.549 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 21 Mar 13:07:22.549 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 298068.
+1:M 21 Mar 13:07:22.549 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 21 Mar 13:07:22.549 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 298068.
+1:M 22 Mar 05:31:29.491 # Connection with slave 10.42.0.74:6379 lost.
+1:M 22 Mar 05:31:29.491 # Connection with slave 10.42.0.86:6379 lost.
+1:M 22 Mar 05:31:29.492 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 22 Mar 05:31:29.492 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 310094.
+1:M 22 Mar 05:31:29.492 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 22 Mar 05:31:29.492 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 310094.
+1:M 22 Mar 16:04:11.286 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 22 Mar 16:04:11.287 # Connection with slave 10.42.0.74:6379 lost.
+1:M 22 Mar 16:04:11.287 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 22 Mar 16:04:11.287 # Connection with slave 10.42.0.86:6379 lost.
+1:M 22 Mar 16:04:11.889 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 22 Mar 16:04:11.890 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 14 bytes of backlog starting from offset 358758.
+1:M 22 Mar 16:04:15.550 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 22 Mar 16:04:15.550 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 14 bytes of backlog starting from offset 358758.
+1:M 23 Mar 05:42:24.387 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 23 Mar 05:42:24.387 # Connection with slave 10.42.0.74:6379 lost.
+1:M 23 Mar 05:42:24.387 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 23 Mar 05:42:24.388 # Connection with slave 10.42.0.86:6379 lost.
+1:M 23 Mar 05:42:24.692 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 23 Mar 05:42:24.692 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 367368.
+1:M 23 Mar 05:42:24.990 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 23 Mar 05:42:24.990 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 367368.
+1:M 23 Mar 16:27:15.625 # Connection with slave 10.42.0.86:6379 lost.
+1:M 23 Mar 16:27:15.626 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 23 Mar 16:27:15.626 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 404958.
+1:M 23 Mar 16:27:15.926 # Connection with slave 10.42.0.74:6379 lost.
+1:M 23 Mar 16:27:15.927 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 23 Mar 16:27:15.927 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 404958.
+1:M 24 Mar 03:51:12.694 # Connection with slave 10.42.0.86:6379 lost.
+1:M 24 Mar 03:51:12.695 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 24 Mar 03:51:12.695 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 413246.
+1:M 24 Mar 03:51:12.994 # Connection with slave 10.42.0.74:6379 lost.
+1:M 24 Mar 03:51:12.995 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 24 Mar 03:51:12.995 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 413246.
+1:M 24 Mar 11:07:56.795 # Connection with slave 10.42.0.86:6379 lost.
+1:M 24 Mar 11:07:56.796 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 24 Mar 11:07:56.796 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 413288.
+1:M 24 Mar 11:07:57.096 # Connection with slave 10.42.0.74:6379 lost.
+1:M 24 Mar 11:07:57.097 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 24 Mar 11:07:57.097 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 413288.
+1:M 24 Mar 17:28:39.224 # Connection with slave 10.42.0.74:6379 lost.
+1:M 24 Mar 17:28:39.238 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 24 Mar 17:28:39.238 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 440868.
+1:M 24 Mar 17:28:39.825 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 24 Mar 17:28:39.825 # Connection with slave 10.42.0.86:6379 lost.
+1:M 24 Mar 17:28:39.926 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 24 Mar 17:28:39.926 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 440868.
+1:M 25 Mar 04:50:15.590 # Connection with slave 10.42.0.74:6379 lost.
+1:M 25 Mar 04:50:15.590 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 25 Mar 04:50:15.590 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 450346.
+1:M 25 Mar 04:50:16.202 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 25 Mar 04:50:16.202 # Connection with slave 10.42.0.86:6379 lost.
+1:M 25 Mar 04:50:16.293 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 25 Mar 04:50:16.293 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 450346.
+1:M 25 Mar 16:02:35.201 # Connection with slave 10.42.0.86:6379 lost.
+1:M 25 Mar 16:02:35.205 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 25 Mar 16:02:35.205 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 492654.
+1:M 25 Mar 16:02:35.494 # Connection with slave 10.42.0.74:6379 lost.
+1:M 25 Mar 16:02:35.495 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 25 Mar 16:02:35.495 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 492654.
+1:M 26 Mar 04:16:18.300 # Connection with slave 10.42.0.86:6379 lost.
+1:M 26 Mar 04:16:18.309 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 26 Mar 04:16:18.309 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 501166.
+1:M 26 Mar 04:16:18.496 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 26 Mar 04:16:18.496 # Connection with slave 10.42.0.74:6379 lost.
+1:M 26 Mar 04:16:18.809 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 26 Mar 04:16:18.809 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 501166.
+1:M 26 Mar 06:09:33.482 # Connection with slave 10.42.0.86:6379 lost.
+1:M 26 Mar 06:09:33.483 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 26 Mar 06:09:33.483 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 510406.
+1:M 26 Mar 06:09:33.681 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 26 Mar 06:09:33.681 # Connection with slave 10.42.0.74:6379 lost.
+1:M 26 Mar 06:09:33.984 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 26 Mar 06:09:33.984 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 510406.
+1:M 26 Mar 18:10:57.683 # Connection with slave 10.42.0.86:6379 lost.
+1:M 26 Mar 18:10:57.684 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 26 Mar 18:10:57.684 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 510434.
+1:M 26 Mar 18:10:57.883 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 26 Mar 18:10:57.883 # Connection with slave 10.42.0.74:6379 lost.
+1:M 26 Mar 18:10:58.184 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 26 Mar 18:10:58.185 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 510434.
+1:M 27 Mar 06:50:09.501 # Connection with slave 10.42.0.86:6379 lost.
+1:M 27 Mar 06:50:09.501 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 27 Mar 06:50:09.501 # Connection with slave 10.42.0.74:6379 lost.
+1:M 27 Mar 06:50:09.502 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 27 Mar 06:50:09.502 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 523216.
+1:M 27 Mar 06:50:10.006 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 27 Mar 06:50:10.006 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 523216.
+1:M 27 Mar 11:58:39.510 # Connection with slave 10.42.0.86:6379 lost.
+1:M 27 Mar 11:58:39.510 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 27 Mar 11:58:39.510 # Connection with slave 10.42.0.74:6379 lost.
+1:M 27 Mar 11:58:39.511 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 27 Mar 11:58:39.511 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 529138.
+1:M 27 Mar 11:58:40.013 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 27 Mar 11:58:40.013 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 529138.
+1:M 27 Mar 16:47:48.304 # Connection with slave 10.42.0.74:6379 lost.
+1:M 27 Mar 16:47:48.332 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 27 Mar 16:47:48.332 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 547338.
+1:M 27 Mar 16:47:48.797 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 27 Mar 16:47:48.797 # Connection with slave 10.42.0.86:6379 lost.
+1:M 27 Mar 16:47:48.798 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 27 Mar 16:47:48.798 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 547338.
+1:M 28 Mar 06:00:19.487 # Connection with slave 10.42.0.74:6379 lost.
+1:M 28 Mar 06:00:19.488 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 28 Mar 06:00:19.488 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 559098.
+1:M 28 Mar 06:00:19.887 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 28 Mar 06:00:19.887 # Connection with slave 10.42.0.86:6379 lost.
+1:M 28 Mar 06:00:19.988 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 28 Mar 06:00:19.988 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 559098.
+1:M 28 Mar 11:13:19.494 # Connection with slave 10.42.0.74:6379 lost.
+1:M 28 Mar 11:13:19.894 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 28 Mar 11:13:25.382 # Connection with slave 10.42.0.86:6379 lost.
+1:M 28 Mar 11:13:25.383 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 28 Mar 11:13:25.383 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 572944.
+1:M 28 Mar 11:13:25.470 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 28 Mar 11:13:25.470 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 572944.
+1:M 28 Mar 17:37:26.478 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 28 Mar 17:37:26.478 # Connection with slave 10.42.0.74:6379 lost.
+1:M 28 Mar 17:37:26.479 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 28 Mar 17:37:33.519 # Connection with slave 10.42.0.86:6379 lost.
+1:M 28 Mar 17:37:33.521 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 28 Mar 17:37:33.521 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 602344.
+1:M 28 Mar 17:37:33.545 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 28 Mar 17:37:33.545 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 602344.
+1:M 29 Mar 04:52:53.277 # Disconnecting timedout slave: 10.42.0.86:6379
+1:M 29 Mar 04:52:53.277 # Connection with slave 10.42.0.86:6379 lost.
+1:M 29 Mar 04:52:53.277 # Disconnecting timedout slave: 10.42.0.74:6379
+1:M 29 Mar 04:52:53.277 # Connection with slave 10.42.0.74:6379 lost.
+1:M 29 Mar 04:52:53.278 * Slave 10.42.0.86:6379 asks for synchronization
+1:M 29 Mar 04:52:53.278 * Partial resynchronization request from 10.42.0.86:6379 accepted. Sending 0 bytes of backlog starting from offset 607048.
+1:M 29 Mar 04:52:53.379 * Slave 10.42.0.74:6379 asks for synchronization
+1:M 29 Mar 04:52:53.379 * Partial resynchronization request from 10.42.0.74:6379 accepted. Sending 0 bytes of backlog starting from offset 607048.
+==== END logs for container master of pod default/redis-master-xlvrc ====

@@ -1,0 +1,312 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484386"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "webapp1-svc",
+                "namespace": "ingress-network",
+                "uid": "6b8fa39f-ca6c-4337-88c8-c2f1969814ec",
+                "resourceVersion": "174226",
+                "creationTimestamp": "2021-03-16T10:52:29Z",
+                "labels": {
+                    "app": "webapp1"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1\"},\"name\":\"webapp1-svc\",\"namespace\":\"ingress-network\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"app\":\"webapp1\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T10:52:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1"
+                },
+                "clusterIP": "10.43.122.103",
+                "clusterIPs": [
+                    "10.43.122.103"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp2-svc",
+                "namespace": "ingress-network",
+                "uid": "9738525f-2ddb-42f7-84d6-396c9b794286",
+                "resourceVersion": "174228",
+                "creationTimestamp": "2021-03-16T10:52:29Z",
+                "labels": {
+                    "app": "webapp2"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp2\"},\"name\":\"webapp2-svc\",\"namespace\":\"ingress-network\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"app\":\"webapp2\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T10:52:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "app": "webapp2"
+                },
+                "clusterIP": "10.43.102.132",
+                "clusterIPs": [
+                    "10.43.102.132"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp3-svc",
+                "namespace": "ingress-network",
+                "uid": "3e580e92-e501-4457-aebe-05eaae05a996",
+                "resourceVersion": "174234",
+                "creationTimestamp": "2021-03-16T10:52:29Z",
+                "labels": {
+                    "app": "webapp3"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp3\"},\"name\":\"webapp3-svc\",\"namespace\":\"ingress-network\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"app\":\"webapp3\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T10:52:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "app": "webapp3"
+                },
+                "clusterIP": "10.43.217.5",
+                "clusterIPs": [
+                    "10.43.217.5"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "nginx-ingress",
+                "namespace": "ingress-network",
+                "uid": "92fbd759-9246-4d0d-b9c4-fe2801360b5b",
+                "resourceVersion": "175089",
+                "creationTimestamp": "2021-03-16T11:10:29Z",
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T11:10:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:spec": {
+                                "f:externalIPs": {},
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    },
+                                    "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "http",
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30149
+                    },
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 443,
+                        "nodePort": 31984
+                    }
+                ],
+                "selector": {
+                    "app": "nginx-ingress"
+                },
+                "clusterIP": "10.43.29.61",
+                "clusterIPs": [
+                    "10.43.29.61"
+                ],
+                "type": "NodePort",
+                "externalIPs": [
+                    "192.168.8.250"
+                ],
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

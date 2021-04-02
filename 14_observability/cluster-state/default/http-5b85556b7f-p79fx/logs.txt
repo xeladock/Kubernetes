@@ -1,0 +1,3 @@
+==== START logs for container http of pod default/http-5b85556b7f-p79fx ====
+Web Server started. Listening on 0.0.0.0:80
+==== END logs for container http of pod default/http-5b85556b7f-p79fx ====

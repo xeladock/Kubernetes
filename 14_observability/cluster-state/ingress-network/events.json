@@ -1,0 +1,131 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484386"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "nginx-ingress-7b89c88756-nsccc.166cce2d903bfeda",
+                "namespace": "ingress-network",
+                "uid": "31d083a7-d3eb-462f-a42e-ba26b00ca927",
+                "resourceVersion": "484101",
+                "creationTimestamp": "2021-03-16T11:11:01Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T11:11:01Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:apiVersion": {},
+                                "f:fieldPath": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "ingress-network",
+                "name": "nginx-ingress-7b89c88756-nsccc",
+                "uid": "dfa8a802-c3e4-4cd5-99d2-e77bd32bb46a",
+                "apiVersion": "v1",
+                "resourceVersion": "175100",
+                "fieldPath": "spec.containers{nginx-ingress}"
+            },
+            "reason": "BackOff",
+            "message": "Back-off restarting failed container",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-16T11:11:01Z",
+            "lastTimestamp": "2021-03-29T09:02:24Z",
+            "count": 31350,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "nginx-ingress-7b89c88756-nsccc.166ccf593ae0b7fd",
+                "namespace": "ingress-network",
+                "uid": "25f2f57a-9a2c-43ba-99af-b453a4948fdf",
+                "resourceVersion": "484321",
+                "creationTimestamp": "2021-03-29T09:07:21Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-29T09:07:21Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:apiVersion": {},
+                                "f:fieldPath": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "ingress-network",
+                "name": "nginx-ingress-7b89c88756-nsccc",
+                "uid": "dfa8a802-c3e4-4cd5-99d2-e77bd32bb46a",
+                "apiVersion": "v1",
+                "resourceVersion": "175100",
+                "fieldPath": "spec.containers{nginx-ingress}"
+            },
+            "reason": "Pulled",
+            "message": "(combined from similar events): Successfully pulled image \"nginx/nginx-ingress:edge\" in 3.261940405s",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-16T11:32:28Z",
+            "lastTimestamp": "2021-03-29T09:07:21Z",
+            "count": 1341,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+==== START logs for container coredns of pod kube-system/coredns-854c77959c-vmtnr ====
+[INFO] plugin/ready: Still waiting on: "kubernetes"
+.:53
+[INFO] plugin/reload: Running configuration MD5 = 442b35f70385f5c97f2491a0ce8a27f6
+CoreDNS-1.8.0
+linux/amd64, go1.15.3, 054c9ae
+==== END logs for container coredns of pod kube-system/coredns-854c77959c-vmtnr ====

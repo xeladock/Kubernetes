@@ -1,0 +1,13 @@
+==== START logs for container php-redis of pod default/frontend-vdpd7 ====
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.42.0.68. Set the 'ServerName' directive globally to suppress this message
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.42.0.68. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 15 14:15:16.535879 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.10 (Debian) PHP/5.6.12 configured -- resuming normal operations
+[Mon Mar 15 14:15:16.537503 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+10.42.0.1 - - [17/Mar/2021:09:39:31 +0000] "GET / HTTP/1.1" 200 826 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:32 +0000] "GET /controllers.js HTTP/1.1" 200 759 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:32 +0000] "GET /guestbook.php?cmd=get&key=messages HTTP/1.1" 200 244 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:37 +0000] "GET /guestbook.php?cmd=set&key=messages&value=,12 HTTP/1.1" 200 254 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:38 +0000] "GET /guestbook.php?cmd=set&key=messages&value=,12,23 HTTP/1.1" 200 254 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:39 +0000] "GET / HTTP/1.1" 200 825 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+10.42.0.1 - - [17/Mar/2021:09:39:40 +0000] "GET /guestbook.php?cmd=get&key=messages HTTP/1.1" 200 250 "http://10.43.108.242/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3835.0 Safari/537.36"
+==== END logs for container php-redis of pod default/frontend-vdpd7 ====

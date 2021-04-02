@@ -1,0 +1,7 @@
+==== START logs for container local-path-provisioner of pod kube-system/local-path-provisioner-5ff76fc89d-2r7ck ====
+I0329 08:26:48.422062       1 leaderelection.go:242] attempting to acquire leader lease  kube-system/rancher.io-local-path...
+I0329 08:27:05.890059       1 leaderelection.go:252] successfully acquired lease kube-system/rancher.io-local-path
+I0329 08:27:05.890283       1 event.go:281] Event(v1.ObjectReference{Kind:"Endpoints", Namespace:"kube-system", Name:"rancher.io-local-path", UID:"1ae7cbf5-89da-4c80-a32d-4cf4ecf44bbe", APIVersion:"v1", ResourceVersion:"482502", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' local-path-provisioner-5ff76fc89d-2r7ck_c410a989-ff4b-457a-a548-b03fe56fe035 became leader
+I0329 08:27:05.890318       1 controller.go:773] Starting provisioner controller rancher.io/local-path_local-path-provisioner-5ff76fc89d-2r7ck_c410a989-ff4b-457a-a548-b03fe56fe035!
+I0329 08:27:06.790614       1 controller.go:822] Started provisioner controller rancher.io/local-path_local-path-provisioner-5ff76fc89d-2r7ck_c410a989-ff4b-457a-a548-b03fe56fe035!
+==== END logs for container local-path-provisioner of pod kube-system/local-path-provisioner-5ff76fc89d-2r7ck ====

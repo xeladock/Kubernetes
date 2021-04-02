@@ -1,0 +1,2 @@
+==== START logs for container helm of pod kube-system/helm-install-traefik-bmzh5 ====
+failed to try resolving symlinks in path "/var/log/pods/kube-system_helm-install-traefik-bmzh5_c7edf064-6143-4c13-9004-5d13dc6b36ee/helm/0.log": lstat /var/log/pods/kube-system_helm-install-traefik-bmzh5_c7edf064-6143-4c13-9004-5d13dc6b36ee: no such file or directory==== END logs for container helm of pod kube-system/helm-install-traefik-bmzh5 ====

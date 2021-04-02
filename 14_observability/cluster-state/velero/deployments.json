@@ -1,0 +1,276 @@
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "484390"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "minio",
+                "namespace": "velero",
+                "uid": "e924c0e8-0590-4c96-9edc-110805307258",
+                "resourceVersion": "355861",
+                "generation": 1,
+                "creationTimestamp": "2021-03-23T09:13:29Z",
+                "labels": {
+                    "component": "minio"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"labels\":{\"component\":\"minio\"},\"name\":\"minio\",\"namespace\":\"velero\"},\"spec\":{\"selector\":{\"matchLabels\":{\"component\":\"minio\"}},\"strategy\":{\"type\":\"Recreate\"},\"template\":{\"metadata\":{\"labels\":{\"component\":\"minio\"}},\"spec\":{\"containers\":[{\"args\":[\"server\",\"/storage\",\"--config-dir=/config\"],\"env\":[{\"name\":\"MINIO_ACCESS_KEY\",\"value\":\"minio\"},{\"name\":\"MINIO_SECRET_KEY\",\"value\":\"minio123\"}],\"image\":\"minio/minio:latest\",\"imagePullPolicy\":\"IfNotPresent\",\"name\":\"minio\",\"ports\":[{\"containerPort\":9000}],\"volumeMounts\":[{\"mountPath\":\"/storage\",\"name\":\"storage\"},{\"mountPath\":\"/config\",\"name\":\"config\"}]}],\"volumes\":[{\"emptyDir\":{},\"name\":\"storage\"},{\"emptyDir\":{},\"name\":\"config\"}]}}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-23T09:13:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:component": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:progressDeadlineSeconds": {},
+                                "f:replicas": {},
+                                "f:revisionHistoryLimit": {},
+                                "f:selector": {},
+                                "f:strategy": {
+                                    "f:type": {}
+                                },
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:component": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"minio\"}": {
+                                                ".": {},
+                                                "f:args": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"MINIO_ACCESS_KEY\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"MINIO_SECRET_KEY\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":9000,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/config\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/storage\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:volumes": {
+                                            ".": {},
+                                            "k:{\"name\":\"config\"}": {
+                                                ".": {},
+                                                "f:emptyDir": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"storage\"}": {
+                                                ".": {},
+                                                "f:emptyDir": {},
+                                                "f:name": {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-23T09:14:04Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    "f:deployment.kubernetes.io/revision": {}
+                                }
+                            },
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:conditions": {
+                                    ".": {},
+                                    "k:{\"type\":\"Available\"}": {
+                                        ".": {},
+                                        "f:lastTransitionTime": {},
+                                        "f:lastUpdateTime": {},
+                                        "f:message": {},
+                                        "f:reason": {},
+                                        "f:status": {},
+                                        "f:type": {}
+                                    },
+                                    "k:{\"type\":\"Progressing\"}": {
+                                        ".": {},
+                                        "f:lastTransitionTime": {},
+                                        "f:lastUpdateTime": {},
+                                        "f:message": {},
+                                        "f:reason": {},
+                                        "f:status": {},
+                                        "f:type": {}
+                                    }
+                                },
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {},
+                                "f:updatedReplicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "component": "minio"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "component": "minio"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "storage",
+                                "emptyDir": {}
+                            },
+                            {
+                                "name": "config",
+                                "emptyDir": {}
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "minio",
+                                "image": "minio/minio:latest",
+                                "args": [
+                                    "server",
+                                    "/storage",
+                                    "--config-dir=/config"
+                                ],
+                                "ports": [
+                                    {
+                                        "containerPort": 9000,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "MINIO_ACCESS_KEY",
+                                        "value": "minio"
+                                    },
+                                    {
+                                        "name": "MINIO_SECRET_KEY",
+                                        "value": "minio123"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "storage",
+                                        "mountPath": "/storage"
+                                    },
+                                    {
+                                        "name": "config",
+                                        "mountPath": "/config"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                },
+                "strategy": {
+                    "type": "Recreate"
+                },
+                "revisionHistoryLimit": 10,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 1,
+                "replicas": 1,
+                "updatedReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "True",
+                        "lastUpdateTime": "2021-03-23T09:14:04Z",
+                        "lastTransitionTime": "2021-03-23T09:14:04Z",
+                        "reason": "MinimumReplicasAvailable",
+                        "message": "Deployment has minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "True",
+                        "lastUpdateTime": "2021-03-23T09:14:04Z",
+                        "lastTransitionTime": "2021-03-23T09:13:29Z",
+                        "reason": "NewReplicaSetAvailable",
+                        "message": "ReplicaSet \"minio-5b84955bdd\" has successfully progressed."
+                    }
+                ]
+            }
+        }
+    ]
+}

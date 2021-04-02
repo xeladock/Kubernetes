@@ -1,0 +1,429 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484380"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kube-dns",
+                "namespace": "kube-system",
+                "uid": "878eee28-6b45-4fe3-9138-c0387eeacba3",
+                "resourceVersion": "273",
+                "creationTimestamp": "2021-03-10T08:47:36Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "CoreDNS",
+                    "objectset.rio.cattle.io/hash": "bce283298811743a0386ab510f2f67ef74240c57"
+                },
+                "annotations": {
+                    "objectset.rio.cattle.io/applied": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"objectset.rio.cattle.io/id\":\"\",\"objectset.rio.cattle.io/owner-gvk\":\"k3s.cattle.io/v1, Kind=Addon\",\"objectset.rio.cattle.io/owner-name\":\"coredns\",\"objectset.rio.cattle.io/owner-namespace\":\"kube-system\",\"prometheus.io/port\":\"9153\",\"prometheus.io/scrape\":\"true\"},\"labels\":{\"k8s-app\":\"kube-dns\",\"kubernetes.io/cluster-service\":\"true\",\"kubernetes.io/name\":\"CoreDNS\",\"objectset.rio.cattle.io/hash\":\"bce283298811743a0386ab510f2f67ef74240c57\"},\"name\":\"kube-dns\",\"namespace\":\"kube-system\"},\"spec\":{\"clusterIP\":\"10.43.0.10\",\"ports\":[{\"name\":\"dns\",\"port\":53,\"protocol\":\"UDP\"},{\"name\":\"dns-tcp\",\"port\":53,\"protocol\":\"TCP\"},{\"name\":\"metrics\",\"port\":9153,\"protocol\":\"TCP\"}],\"selector\":{\"k8s-app\":\"kube-dns\"}}}",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "coredns",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system",
+                    "prometheus.io/port": "9153",
+                    "prometheus.io/scrape": "true"
+                },
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T08:47:36Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:objectset.rio.cattle.io/applied": {},
+                                    "f:objectset.rio.cattle.io/id": {},
+                                    "f:objectset.rio.cattle.io/owner-gvk": {},
+                                    "f:objectset.rio.cattle.io/owner-name": {},
+                                    "f:objectset.rio.cattle.io/owner-namespace": {},
+                                    "f:prometheus.io/port": {},
+                                    "f:prometheus.io/scrape": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:k8s-app": {},
+                                    "f:kubernetes.io/cluster-service": {},
+                                    "f:kubernetes.io/name": {},
+                                    "f:objectset.rio.cattle.io/hash": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:clusterIP": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":53,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    },
+                                    "k:{\"port\":53,\"protocol\":\"UDP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    },
+                                    "k:{\"port\":9153,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "dns",
+                        "protocol": "UDP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "dns-tcp",
+                        "protocol": "TCP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "metrics",
+                        "protocol": "TCP",
+                        "port": 9153,
+                        "targetPort": 9153
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "kube-dns"
+                },
+                "clusterIP": "10.43.0.10",
+                "clusterIPs": [
+                    "10.43.0.10"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "metrics-server",
+                "namespace": "kube-system",
+                "uid": "57661195-06fa-4712-a320-b09066a78323",
+                "resourceVersion": "324",
+                "creationTimestamp": "2021-03-10T08:47:37Z",
+                "labels": {
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "Metrics-server",
+                    "objectset.rio.cattle.io/hash": "a5d3bc601c871e123fa32b27f549b6ea770bcf4a"
+                },
+                "annotations": {
+                    "objectset.rio.cattle.io/applied": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{\"objectset.rio.cattle.io/id\":\"\",\"objectset.rio.cattle.io/owner-gvk\":\"k3s.cattle.io/v1, Kind=Addon\",\"objectset.rio.cattle.io/owner-name\":\"metrics-server-service\",\"objectset.rio.cattle.io/owner-namespace\":\"kube-system\"},\"labels\":{\"kubernetes.io/cluster-service\":\"true\",\"kubernetes.io/name\":\"Metrics-server\",\"objectset.rio.cattle.io/hash\":\"a5d3bc601c871e123fa32b27f549b6ea770bcf4a\"},\"name\":\"metrics-server\",\"namespace\":\"kube-system\"},\"spec\":{\"ports\":[{\"port\":443,\"protocol\":\"TCP\",\"targetPort\":443}],\"selector\":{\"k8s-app\":\"metrics-server\"}}}",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "metrics-server-service",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system"
+                },
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T08:47:37Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:objectset.rio.cattle.io/applied": {},
+                                    "f:objectset.rio.cattle.io/id": {},
+                                    "f:objectset.rio.cattle.io/owner-gvk": {},
+                                    "f:objectset.rio.cattle.io/owner-name": {},
+                                    "f:objectset.rio.cattle.io/owner-namespace": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:kubernetes.io/cluster-service": {},
+                                    "f:kubernetes.io/name": {},
+                                    "f:objectset.rio.cattle.io/hash": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 443
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "metrics-server"
+                },
+                "clusterIP": "10.43.60.216",
+                "clusterIPs": [
+                    "10.43.60.216"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "traefik-prometheus",
+                "namespace": "kube-system",
+                "uid": "a495d2c0-3271-4a67-b4b5-752c74eb2846",
+                "resourceVersion": "513",
+                "creationTimestamp": "2021-03-10T08:48:51Z",
+                "labels": {
+                    "app": "traefik",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "traefik-1.81.0",
+                    "heritage": "Helm",
+                    "release": "traefik"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "traefik",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "managedFields": [
+                    {
+                        "manager": "Go-http-client",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T08:48:51Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:meta.helm.sh/release-name": {},
+                                    "f:meta.helm.sh/release-namespace": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:app.kubernetes.io/managed-by": {},
+                                    "f:chart": {},
+                                    "f:heritage": {},
+                                    "f:release": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":9100,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:release": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "metrics",
+                        "protocol": "TCP",
+                        "port": 9100,
+                        "targetPort": "metrics"
+                    }
+                ],
+                "selector": {
+                    "app": "traefik",
+                    "release": "traefik"
+                },
+                "clusterIP": "10.43.208.248",
+                "clusterIPs": [
+                    "10.43.208.248"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "traefik",
+                "namespace": "kube-system",
+                "uid": "9ac5c52f-3517-4faf-9742-24fbdfe30079",
+                "resourceVersion": "151680",
+                "creationTimestamp": "2021-03-10T08:48:51Z",
+                "labels": {
+                    "app": "traefik",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "chart": "traefik-1.81.0",
+                    "heritage": "Helm",
+                    "release": "traefik"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "traefik",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "managedFields": [
+                    {
+                        "manager": "Go-http-client",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T08:48:51Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:meta.helm.sh/release-name": {},
+                                    "f:meta.helm.sh/release-namespace": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:app.kubernetes.io/managed-by": {},
+                                    "f:chart": {},
+                                    "f:heritage": {},
+                                    "f:release": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    },
+                                    "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:release": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T14:15:13Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:loadBalancer": {
+                                    "f:ingress": {}
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "http",
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": "http",
+                        "nodePort": 32701
+                    },
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": "https",
+                        "nodePort": 32247
+                    }
+                ],
+                "selector": {
+                    "app": "traefik",
+                    "release": "traefik"
+                },
+                "clusterIP": "10.43.212.54",
+                "clusterIPs": [
+                    "10.43.212.54"
+                ],
+                "type": "LoadBalancer",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {
+                    "ingress": [
+                        {
+                            "ip": "192.168.8.250"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

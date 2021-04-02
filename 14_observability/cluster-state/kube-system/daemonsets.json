@@ -1,0 +1,951 @@
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "484380"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "svclb-traefik",
+                "namespace": "kube-system",
+                "uid": "2bfb3c3b-ffbc-4b7d-b337-7157f8760b08",
+                "resourceVersion": "151679",
+                "generation": 1,
+                "creationTimestamp": "2021-03-10T08:48:51Z",
+                "labels": {
+                    "objectset.rio.cattle.io/hash": "f31475152fbf70655d3c016d368e90118938f6ea",
+                    "svccontroller.k3s.cattle.io/nodeselector": "false"
+                },
+                "annotations": {
+                    "deprecated.daemonset.template.generation": "1",
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/8xUTW/jNhD9K8WcKUWy5MQR0MMiySFoNzFsby9BEIyoUcyaIgVypMYw9N8LKsna2XwV2x569HDm+c17o7eDjTIVFHCO1FizJAYB2Ko/yHllDRSAbeuP+hQENMRYISMUOzDYEBTge6nLiB1SrTYgxrJvUYa3TVdS5LeeqQEB0hGysmalGvKMTQuF6bQWoLEk7QOmLf8kyZ44dsrGEpk1xcoerdGvoYA6S/OTaTqd1GV9khxPp1Umk/S4yo5ndJqk6ew0m9XHhCACLWkNO6s1uXiT+QM0YyvypEmydQEVtScYBKAxlkeKH5JR1ePae3wQ7zbbvwy56L7fQAFHfSp++U2Z6tcluV5J+nTuSeO9up+3v6X9IGBsWFBNjowkD8XN7qXJo79Pl7Cn94pAN25/inIqp5M6yqbpSZTXWEenJ/kkmuR1WdWUJcnJaXB8r1DBrqPhdhDgW5JB3r0DO2iQ5fr372eAbfvqsoZBAFPTamQaRw5O8R9c1luQH1+J7+UP2w8H7MMYKkPuUcqnTl1GrXUczRIQoBq8D0WHRq7JHW20altykS6LPonTeAICQvf7CGvreW4dQzFLxP4v96XWWbbSaihgdTaH4VYAmf4Qb7k4u5tfL1YgoEfdhdIsgUF8bzi/WK7u5ovr1fVBywj2Y8+nKJfzg/c0ifMsnqSTeJqPxBx527nx9nbDkzrzTuu51UpuoYDL+sry3JEnEyLIk+yc4u2ZNUwPPIqOLZZKK1b0aGpVQXEDVxeruy/nXy+v4HYYDkg9a5nn2b+14xFi70eeZ68MGWs/5UhA/w8seQvm/+HJrQC2mtxzuN7sYEMBP0Rx5KymOOSVM8Tkw8fXoOfHXG3D1JjTFw/KswcBVNckGQq4sku5pqrTNO79MeTThx61Gg39FPKZU6wk6i9VZY2/Nnr7JsxwG4KiaytkWrJDpvttUIa3bTBhYbVW5v7b+A4C3IvfYxg+fDPYo9JYaoIiHcbgYeRuVFh2zpHhq64pyT3TrKBIBJix9lV5/6JckVeOqvcnFoTVFopkGP4OAAD//7uaw1EOCAAA",
+                    "objectset.rio.cattle.io/id": "svccontroller",
+                    "objectset.rio.cattle.io/owner-gvk": "/v1, Kind=Service",
+                    "objectset.rio.cattle.io/owner-name": "traefik",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "kind": "Service",
+                        "name": "traefik",
+                        "uid": "9ac5c52f-3517-4faf-9742-24fbdfe30079",
+                        "controller": true
+                    }
+                ],
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-15T14:15:13Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:deprecated.daemonset.template.generation": {},
+                                    "f:objectset.rio.cattle.io/applied": {},
+                                    "f:objectset.rio.cattle.io/id": {},
+                                    "f:objectset.rio.cattle.io/owner-gvk": {},
+                                    "f:objectset.rio.cattle.io/owner-name": {},
+                                    "f:objectset.rio.cattle.io/owner-namespace": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:objectset.rio.cattle.io/hash": {},
+                                    "f:svccontroller.k3s.cattle.io/nodeselector": {}
+                                },
+                                "f:ownerReferences": {
+                                    ".": {},
+                                    "k:{\"uid\":\"9ac5c52f-3517-4faf-9742-24fbdfe30079\"}": {
+                                        ".": {},
+                                        "f:apiVersion": {},
+                                        "f:controller": {},
+                                        "f:kind": {},
+                                        "f:name": {},
+                                        "f:uid": {}
+                                    }
+                                }
+                            },
+                            "f:spec": {
+                                "f:revisionHistoryLimit": {},
+                                "f:selector": {},
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:app": {},
+                                            "f:svccontroller.k3s.cattle.io/svcname": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"lb-port-443\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"DEST_IP\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PROTO\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"SRC_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":443,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:hostPort": {},
+                                                        "f:name": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:capabilities": {
+                                                        ".": {},
+                                                        "f:add": {}
+                                                    }
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            },
+                                            "k:{\"name\":\"lb-port-80\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"DEST_IP\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"DEST_PROTO\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"SRC_PORT\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":80,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:hostPort": {},
+                                                        "f:name": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:capabilities": {
+                                                        ".": {},
+                                                        "f:add": {}
+                                                    }
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:tolerations": {}
+                                    }
+                                },
+                                "f:updateStrategy": {
+                                    "f:rollingUpdate": {
+                                        ".": {},
+                                        "f:maxUnavailable": {}
+                                    },
+                                    "f:type": {}
+                                }
+                            },
+                            "f:status": {
+                                "f:currentNumberScheduled": {},
+                                "f:desiredNumberScheduled": {},
+                                "f:numberAvailable": {},
+                                "f:numberMisscheduled": {},
+                                "f:numberReady": {},
+                                "f:observedGeneration": {},
+                                "f:updatedNumberScheduled": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "selector": {
+                    "matchLabels": {
+                        "app": "svclb-traefik"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app": "svclb-traefik",
+                            "svccontroller.k3s.cattle.io/svcname": "traefik"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "lb-port-80",
+                                "image": "rancher/klipper-lb:v0.1.2",
+                                "ports": [
+                                    {
+                                        "name": "lb-port-80",
+                                        "hostPort": 80,
+                                        "containerPort": 80,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "SRC_PORT",
+                                        "value": "80"
+                                    },
+                                    {
+                                        "name": "DEST_PROTO",
+                                        "value": "TCP"
+                                    },
+                                    {
+                                        "name": "DEST_PORT",
+                                        "value": "80"
+                                    },
+                                    {
+                                        "name": "DEST_IP",
+                                        "value": "10.43.212.54"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_ADMIN"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "name": "lb-port-443",
+                                "image": "rancher/klipper-lb:v0.1.2",
+                                "ports": [
+                                    {
+                                        "name": "lb-port-443",
+                                        "hostPort": 443,
+                                        "containerPort": 443,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "SRC_PORT",
+                                        "value": "443"
+                                    },
+                                    {
+                                        "name": "DEST_PROTO",
+                                        "value": "TCP"
+                                    },
+                                    {
+                                        "name": "DEST_PORT",
+                                        "value": "443"
+                                    },
+                                    {
+                                        "name": "DEST_IP",
+                                        "value": "10.43.212.54"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_ADMIN"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/control-plane",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            }
+                        ]
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": 1
+                    }
+                },
+                "revisionHistoryLimit": 10
+            },
+            "status": {
+                "currentNumberScheduled": 1,
+                "numberMisscheduled": 0,
+                "desiredNumberScheduled": 1,
+                "numberReady": 1,
+                "observedGeneration": 1,
+                "updatedNumberScheduled": 1,
+                "numberAvailable": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "weave-net",
+                "namespace": "kube-system",
+                "uid": "a1452572-dc5f-4653-9d05-63cd4bcb1ee8",
+                "resourceVersion": "200899",
+                "generation": 1,
+                "creationTimestamp": "2021-03-17T11:33:26Z",
+                "labels": {
+                    "name": "weave-net"
+                },
+                "annotations": {
+                    "cloud.weave.works/launcher-info": "{\n  \"original-request\": {\n    \"url\": \"/k8s/v1.16/net.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6IjIwMjEtMDItMjJUMTk6NDk6MjdaIiwgR29WZXJzaW9uOiJnbzEuMTUuOCIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9ClNlcnZlciBWZXJzaW9uOiB2ZXJzaW9uLkluZm97TWFqb3I6IjEiLCBNaW5vcjoiMjAiLCBHaXRWZXJzaW9uOiJ2MS4yMC40K2szczEiLCBHaXRDb21taXQ6IjgzOGE5MDZhYjVlYmE2MmZmNTI5ZDZhM2E3NDYzODRlYmE4MTA3NTgiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDIxLTAyLTIyVDE5OjQ5OjI3WiIsIEdvVmVyc2lvbjoiZ28xLjE1LjgiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQo=\u0026env.IPALLOC_RANGE=10.33.0.0/16\",\n    \"date\": \"Wed Mar 17 2021 11:33:25 GMT+0000 (UTC)\"\n  },\n  \"email-address\": \"support@weave.works\"\n}",
+                    "deprecated.daemonset.template.generation": "1",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"DaemonSet\",\"metadata\":{\"annotations\":{\"cloud.weave.works/launcher-info\":\"{\\n  \\\"original-request\\\": {\\n    \\\"url\\\": \\\"/k8s/v1.16/net.yaml?k8s-version=Q2xpZW50IFZlcnNpb246IHZlcnNpb24uSW5mb3tNYWpvcjoiMSIsIE1pbm9yOiIyMCIsIEdpdFZlcnNpb246InYxLjIwLjQrazNzMSIsIEdpdENvbW1pdDoiODM4YTkwNmFiNWViYTYyZmY1MjlkNmEzYTc0NjM4NGViYTgxMDc1OCIsIEdpdFRyZWVTdGF0ZToiY2xlYW4iLCBCdWlsZERhdGU6IjIwMjEtMDItMjJUMTk6NDk6MjdaIiwgR29WZXJzaW9uOiJnbzEuMTUuOCIsIENvbXBpbGVyOiJnYyIsIFBsYXRmb3JtOiJsaW51eC9hbWQ2NCJ9ClNlcnZlciBWZXJzaW9uOiB2ZXJzaW9uLkluZm97TWFqb3I6IjEiLCBNaW5vcjoiMjAiLCBHaXRWZXJzaW9uOiJ2MS4yMC40K2szczEiLCBHaXRDb21taXQ6IjgzOGE5MDZhYjVlYmE2MmZmNTI5ZDZhM2E3NDYzODRlYmE4MTA3NTgiLCBHaXRUcmVlU3RhdGU6ImNsZWFuIiwgQnVpbGREYXRlOiIyMDIxLTAyLTIyVDE5OjQ5OjI3WiIsIEdvVmVyc2lvbjoiZ28xLjE1LjgiLCBDb21waWxlcjoiZ2MiLCBQbGF0Zm9ybToibGludXgvYW1kNjQifQo=\\u0026env.IPALLOC_RANGE=10.33.0.0/16\\\",\\n    \\\"date\\\": \\\"Wed Mar 17 2021 11:33:25 GMT+0000 (UTC)\\\"\\n  },\\n  \\\"email-address\\\": \\\"support@weave.works\\\"\\n}\"},\"labels\":{\"name\":\"weave-net\"},\"name\":\"weave-net\",\"namespace\":\"kube-system\"},\"spec\":{\"minReadySeconds\":5,\"selector\":{\"matchLabels\":{\"name\":\"weave-net\"}},\"template\":{\"metadata\":{\"labels\":{\"name\":\"weave-net\"}},\"spec\":{\"containers\":[{\"command\":[\"/home/weave/launch.sh\"],\"env\":[{\"name\":\"HOSTNAME\",\"valueFrom\":{\"fieldRef\":{\"apiVersion\":\"v1\",\"fieldPath\":\"spec.nodeName\"}}},{\"name\":\"IPALLOC_RANGE\",\"value\":\"10.33.0.0/16\"},{\"name\":\"INIT_CONTAINER\",\"value\":\"true\"}],\"image\":\"docker.io/weaveworks/weave-kube:2.8.1\",\"name\":\"weave\",\"readinessProbe\":{\"httpGet\":{\"host\":\"127.0.0.1\",\"path\":\"/status\",\"port\":6784}},\"resources\":{\"requests\":{\"cpu\":\"50m\",\"memory\":\"100Mi\"}},\"securityContext\":{\"privileged\":true},\"volumeMounts\":[{\"mountPath\":\"/weavedb\",\"name\":\"weavedb\"},{\"mountPath\":\"/host/var/lib/dbus\",\"name\":\"dbus\"},{\"mountPath\":\"/host/etc/machine-id\",\"name\":\"machine-id\",\"readOnly\":true},{\"mountPath\":\"/run/xtables.lock\",\"name\":\"xtables-lock\"}]},{\"env\":[{\"name\":\"HOSTNAME\",\"valueFrom\":{\"fieldRef\":{\"apiVersion\":\"v1\",\"fieldPath\":\"spec.nodeName\"}}}],\"image\":\"docker.io/weaveworks/weave-npc:2.8.1\",\"name\":\"weave-npc\",\"resources\":{\"requests\":{\"cpu\":\"50m\",\"memory\":\"100Mi\"}},\"securityContext\":{\"privileged\":true},\"volumeMounts\":[{\"mountPath\":\"/run/xtables.lock\",\"name\":\"xtables-lock\"}]}],\"dnsPolicy\":\"ClusterFirstWithHostNet\",\"hostNetwork\":true,\"initContainers\":[{\"command\":[\"/home/weave/init.sh\"],\"image\":\"docker.io/weaveworks/weave-kube:2.8.1\",\"name\":\"weave-init\",\"securityContext\":{\"privileged\":true},\"volumeMounts\":[{\"mountPath\":\"/host/opt\",\"name\":\"cni-bin\"},{\"mountPath\":\"/host/home\",\"name\":\"cni-bin2\"},{\"mountPath\":\"/host/etc\",\"name\":\"cni-conf\"},{\"mountPath\":\"/lib/modules\",\"name\":\"lib-modules\"},{\"mountPath\":\"/run/xtables.lock\",\"name\":\"xtables-lock\"}]}],\"priorityClassName\":\"system-node-critical\",\"restartPolicy\":\"Always\",\"securityContext\":{\"seLinuxOptions\":{}},\"serviceAccountName\":\"weave-net\",\"tolerations\":[{\"effect\":\"NoSchedule\",\"operator\":\"Exists\"},{\"effect\":\"NoExecute\",\"operator\":\"Exists\"}],\"volumes\":[{\"hostPath\":{\"path\":\"/var/lib/weave\"},\"name\":\"weavedb\"},{\"hostPath\":{\"path\":\"/opt\"},\"name\":\"cni-bin\"},{\"hostPath\":{\"path\":\"/home\"},\"name\":\"cni-bin2\"},{\"hostPath\":{\"path\":\"/etc\"},\"name\":\"cni-conf\"},{\"hostPath\":{\"path\":\"/var/lib/dbus\"},\"name\":\"dbus\"},{\"hostPath\":{\"path\":\"/lib/modules\"},\"name\":\"lib-modules\"},{\"hostPath\":{\"path\":\"/etc/machine-id\",\"type\":\"FileOrCreate\"},\"name\":\"machine-id\"},{\"hostPath\":{\"path\":\"/run/xtables.lock\",\"type\":\"FileOrCreate\"},\"name\":\"xtables-lock\"}]}},\"updateStrategy\":{\"type\":\"RollingUpdate\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-17T11:33:26Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:cloud.weave.works/launcher-info": {},
+                                    "f:deprecated.daemonset.template.generation": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:minReadySeconds": {},
+                                "f:revisionHistoryLimit": {},
+                                "f:selector": {},
+                                "f:template": {
+                                    "f:metadata": {
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        "f:containers": {
+                                            "k:{\"name\":\"weave\"}": {
+                                                ".": {},
+                                                "f:command": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"HOSTNAME\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:valueFrom": {
+                                                            ".": {},
+                                                            "f:fieldRef": {
+                                                                ".": {},
+                                                                "f:apiVersion": {},
+                                                                "f:fieldPath": {}
+                                                            }
+                                                        }
+                                                    },
+                                                    "k:{\"name\":\"INIT_CONTAINER\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    },
+                                                    "k:{\"name\":\"IPALLOC_RANGE\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:readinessProbe": {
+                                                    ".": {},
+                                                    "f:failureThreshold": {},
+                                                    "f:httpGet": {
+                                                        ".": {},
+                                                        "f:host": {},
+                                                        "f:path": {},
+                                                        "f:port": {},
+                                                        "f:scheme": {}
+                                                    },
+                                                    "f:periodSeconds": {},
+                                                    "f:successThreshold": {},
+                                                    "f:timeoutSeconds": {}
+                                                },
+                                                "f:resources": {
+                                                    ".": {},
+                                                    "f:requests": {
+                                                        ".": {},
+                                                        "f:cpu": {},
+                                                        "f:memory": {}
+                                                    }
+                                                },
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:privileged": {}
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/host/etc/machine-id\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {},
+                                                        "f:readOnly": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/host/var/lib/dbus\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/run/xtables.lock\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/weavedb\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            },
+                                            "k:{\"name\":\"weave-npc\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"HOSTNAME\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:valueFrom": {
+                                                            ".": {},
+                                                            "f:fieldRef": {
+                                                                ".": {},
+                                                                "f:apiVersion": {},
+                                                                "f:fieldPath": {}
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:resources": {
+                                                    ".": {},
+                                                    "f:requests": {
+                                                        ".": {},
+                                                        "f:cpu": {},
+                                                        "f:memory": {}
+                                                    }
+                                                },
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:privileged": {}
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/run/xtables.lock\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:hostNetwork": {},
+                                        "f:initContainers": {
+                                            ".": {},
+                                            "k:{\"name\":\"weave-init\"}": {
+                                                ".": {},
+                                                "f:command": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:resources": {},
+                                                "f:securityContext": {
+                                                    ".": {},
+                                                    "f:privileged": {}
+                                                },
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {},
+                                                "f:volumeMounts": {
+                                                    ".": {},
+                                                    "k:{\"mountPath\":\"/host/etc\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/host/home\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/host/opt\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/lib/modules\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    },
+                                                    "k:{\"mountPath\":\"/run/xtables.lock\"}": {
+                                                        ".": {},
+                                                        "f:mountPath": {},
+                                                        "f:name": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:priorityClassName": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {
+                                            ".": {},
+                                            "f:seLinuxOptions": {}
+                                        },
+                                        "f:serviceAccount": {},
+                                        "f:serviceAccountName": {},
+                                        "f:terminationGracePeriodSeconds": {},
+                                        "f:tolerations": {},
+                                        "f:volumes": {
+                                            ".": {},
+                                            "k:{\"name\":\"cni-bin\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"cni-bin2\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"cni-conf\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"dbus\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"lib-modules\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"machine-id\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"weavedb\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            },
+                                            "k:{\"name\":\"xtables-lock\"}": {
+                                                ".": {},
+                                                "f:hostPath": {
+                                                    ".": {},
+                                                    "f:path": {},
+                                                    "f:type": {}
+                                                },
+                                                "f:name": {}
+                                            }
+                                        }
+                                    }
+                                },
+                                "f:updateStrategy": {
+                                    "f:rollingUpdate": {
+                                        ".": {},
+                                        "f:maxUnavailable": {}
+                                    },
+                                    "f:type": {}
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "apps/v1",
+                        "time": "2021-03-17T11:33:45Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:currentNumberScheduled": {},
+                                "f:desiredNumberScheduled": {},
+                                "f:numberAvailable": {},
+                                "f:numberReady": {},
+                                "f:observedGeneration": {},
+                                "f:updatedNumberScheduled": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "selector": {
+                    "matchLabels": {
+                        "name": "weave-net"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "weave-net"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "weavedb",
+                                "hostPath": {
+                                    "path": "/var/lib/weave",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "cni-bin",
+                                "hostPath": {
+                                    "path": "/opt",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "cni-bin2",
+                                "hostPath": {
+                                    "path": "/home",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "cni-conf",
+                                "hostPath": {
+                                    "path": "/etc",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "dbus",
+                                "hostPath": {
+                                    "path": "/var/lib/dbus",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "lib-modules",
+                                "hostPath": {
+                                    "path": "/lib/modules",
+                                    "type": ""
+                                }
+                            },
+                            {
+                                "name": "machine-id",
+                                "hostPath": {
+                                    "path": "/etc/machine-id",
+                                    "type": "FileOrCreate"
+                                }
+                            },
+                            {
+                                "name": "xtables-lock",
+                                "hostPath": {
+                                    "path": "/run/xtables.lock",
+                                    "type": "FileOrCreate"
+                                }
+                            }
+                        ],
+                        "initContainers": [
+                            {
+                                "name": "weave-init",
+                                "image": "docker.io/weaveworks/weave-kube:2.8.1",
+                                "command": [
+                                    "/home/weave/init.sh"
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "cni-bin",
+                                        "mountPath": "/host/opt"
+                                    },
+                                    {
+                                        "name": "cni-bin2",
+                                        "mountPath": "/host/home"
+                                    },
+                                    {
+                                        "name": "cni-conf",
+                                        "mountPath": "/host/etc"
+                                    },
+                                    {
+                                        "name": "lib-modules",
+                                        "mountPath": "/lib/modules"
+                                    },
+                                    {
+                                        "name": "xtables-lock",
+                                        "mountPath": "/run/xtables.lock"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "privileged": true
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "weave",
+                                "image": "docker.io/weaveworks/weave-kube:2.8.1",
+                                "command": [
+                                    "/home/weave/launch.sh"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "HOSTNAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "IPALLOC_RANGE",
+                                        "value": "10.33.0.0/16"
+                                    },
+                                    {
+                                        "name": "INIT_CONTAINER",
+                                        "value": "true"
+                                    }
+                                ],
+                                "resources": {
+                                    "requests": {
+                                        "cpu": "50m",
+                                        "memory": "100Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "weavedb",
+                                        "mountPath": "/weavedb"
+                                    },
+                                    {
+                                        "name": "dbus",
+                                        "mountPath": "/host/var/lib/dbus"
+                                    },
+                                    {
+                                        "name": "machine-id",
+                                        "readOnly": true,
+                                        "mountPath": "/host/etc/machine-id"
+                                    },
+                                    {
+                                        "name": "xtables-lock",
+                                        "mountPath": "/run/xtables.lock"
+                                    }
+                                ],
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/status",
+                                        "port": 6784,
+                                        "host": "127.0.0.1",
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "privileged": true
+                                }
+                            },
+                            {
+                                "name": "weave-npc",
+                                "image": "docker.io/weaveworks/weave-npc:2.8.1",
+                                "env": [
+                                    {
+                                        "name": "HOSTNAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "resources": {
+                                    "requests": {
+                                        "cpu": "50m",
+                                        "memory": "100Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "xtables-lock",
+                                        "mountPath": "/run/xtables.lock"
+                                    }
+                                ],
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "privileged": true
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirstWithHostNet",
+                        "serviceAccountName": "weave-net",
+                        "serviceAccount": "weave-net",
+                        "hostNetwork": true,
+                        "securityContext": {
+                            "seLinuxOptions": {}
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "operator": "Exists",
+                                "effect": "NoExecute"
+                            }
+                        ],
+                        "priorityClassName": "system-node-critical"
+                    }
+                },
+                "updateStrategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": 1
+                    }
+                },
+                "minReadySeconds": 5,
+                "revisionHistoryLimit": 10
+            },
+            "status": {
+                "currentNumberScheduled": 1,
+                "numberMisscheduled": 0,
+                "desiredNumberScheduled": 1,
+                "numberReady": 1,
+                "observedGeneration": 1,
+                "updatedNumberScheduled": 1,
+                "numberAvailable": 1
+            }
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484383"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "dashboard-metrics-scraper",
+                "namespace": "kubernetes-dashboard",
+                "uid": "dab3b6cf-8f3a-42db-a5ef-cac5e927be85",
+                "resourceVersion": "6473",
+                "creationTimestamp": "2021-03-10T11:05:24Z",
+                "labels": {
+                    "k8s-app": "dashboard-metrics-scraper"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"k8s-app\":\"dashboard-metrics-scraper\"},\"name\":\"dashboard-metrics-scraper\",\"namespace\":\"kubernetes-dashboard\"},\"spec\":{\"ports\":[{\"port\":8000,\"targetPort\":8000}],\"selector\":{\"k8s-app\":\"dashboard-metrics-scraper\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T11:05:24Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":8000,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 8000,
+                        "targetPort": 8000
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "dashboard-metrics-scraper"
+                },
+                "clusterIP": "10.43.105.102",
+                "clusterIPs": [
+                    "10.43.105.102"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "kubernetes-dashboard",
+                "namespace": "kubernetes-dashboard",
+                "uid": "be26799f-04a6-4fa2-be4c-6bd88a4d3c68",
+                "resourceVersion": "172271",
+                "creationTimestamp": "2021-03-16T10:05:58Z",
+                "labels": {
+                    "k8s-app": "kubernetes-dashboard"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-expose",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T10:05:58Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":8443,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:k8s-app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    },
+                    {
+                        "manager": "kubectl-patch",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-16T10:07:03Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:spec": {
+                                "f:externalIPs": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 8443,
+                        "targetPort": 8443
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "kubernetes-dashboard"
+                },
+                "clusterIP": "10.43.198.31",
+                "clusterIPs": [
+                    "10.43.198.31"
+                ],
+                "type": "ClusterIP",
+                "externalIPs": [
+                    "192.168.8.250"
+                ],
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

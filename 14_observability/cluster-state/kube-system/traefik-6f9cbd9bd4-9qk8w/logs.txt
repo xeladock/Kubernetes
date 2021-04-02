@@ -1,0 +1,23 @@
+==== START logs for container traefik of pod kube-system/traefik-6f9cbd9bd4-9qk8w ====
+{"level":"info","msg":"Using TOML configuration file /config/traefik.toml","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"No tls.defaultCertificate given for https: using the first item in tls.certificates as a fallback.","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Traefik version v1.7.19 built on 2019-10-28_02:07:32PM","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://docs.traefik.io/v1.7/basics/#collected-data\n","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Preparing server http \u0026{Address::80 TLS:\u003cnil\u003e Redirect:\u003cnil\u003e Auth:\u003cnil\u003e WhitelistSourceRange:[] WhiteList:\u003cnil\u003e Compress:true ProxyProtocol:\u003cnil\u003e ForwardedHeaders:0xc000870a60} with readTimeout=0s writeTimeout=0s idleTimeout=3m0s","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Preparing server https \u0026{Address::443 TLS:0xc00029ad80 Redirect:\u003cnil\u003e Auth:\u003cnil\u003e WhitelistSourceRange:[] WhiteList:\u003cnil\u003e Compress:true ProxyProtocol:\u003cnil\u003e ForwardedHeaders:0xc000870a80} with readTimeout=0s writeTimeout=0s idleTimeout=3m0s","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Starting server on :80","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Preparing server prometheus \u0026{Address::9100 TLS:\u003cnil\u003e Redirect:\u003cnil\u003e Auth:\u003cnil\u003e WhitelistSourceRange:[] WhiteList:\u003cnil\u003e Compress:false ProxyProtocol:\u003cnil\u003e ForwardedHeaders:0xc000870a40} with readTimeout=0s writeTimeout=0s idleTimeout=3m0s","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Starting server on :443","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Starting provider configuration.ProviderAggregator {}","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Starting server on :9100","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Starting provider *kubernetes.Provider {\"Watch\":true,\"Filename\":\"\",\"Constraints\":[],\"Trace\":false,\"TemplateVersion\":0,\"DebugLogGeneratedTemplate\":false,\"Endpoint\":\"\",\"Token\":\"\",\"CertAuthFilePath\":\"\",\"DisablePassHostHeaders\":false,\"EnablePassTLSCert\":false,\"Namespaces\":null,\"LabelSelector\":\"\",\"IngressClass\":\"\",\"IngressEndpoint\":{\"IP\":\"\",\"Hostname\":\"\",\"PublishedService\":\"kube-system/traefik\"},\"ThrottleDuration\":0}","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"ingress label selector is: \"\"","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Creating in-cluster Provider client","time":"2021-03-19T16:55:35Z"}
+{"level":"info","msg":"Server configuration reloaded on :443","time":"2021-03-19T16:55:39Z"}
+{"level":"info","msg":"Server configuration reloaded on :9100","time":"2021-03-19T16:55:39Z"}
+{"level":"info","msg":"Server configuration reloaded on :80","time":"2021-03-19T16:55:39Z"}
+{"level":"warning","msg":"A new release has been found: 2.4.7. Please consider updating.","time":"2021-03-19T17:05:36Z"}
+{"level":"warning","msg":"A new release has been found: 2.4.7. Please consider updating.","time":"2021-03-22T13:52:17Z"}
+{"level":"warning","msg":"A new release has been found: 2.4.8. Please consider updating.","time":"2021-03-25T09:18:04Z"}
+{"level":"warning","msg":"A new release has been found: 2.4.8. Please consider updating.","time":"2021-03-28T15:18:43Z"}
+==== END logs for container traefik of pod kube-system/traefik-6f9cbd9bd4-9qk8w ====

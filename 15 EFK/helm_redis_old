@@ -1,0 +1,161 @@
+NAME:   snug-pug
+
+LAST DEPLOYED: Tue Mar 30 09:46:44 2021
+
+NAMESPACE: default
+
+STATUS: DEPLOYED
+
+
+
+RESOURCES:
+
+==> v1/Pod(related)
+
+NAME                     READY  STATUS   RESTARTS  AGE
+
+snug-pug-redis-master-0  0/1    Pending  0         0s
+
+snug-pug-redis-slave-0   0/1    Pending  0         0s
+
+
+
+==> v1/Secret
+
+NAME            TYPE    DATA  AGE
+
+snug-pug-redis  Opaque  1     0s
+
+
+
+==> v1/ConfigMap
+
+NAME                   DATA  AGE
+
+snug-pug-redis         3     0s
+
+snug-pug-redis-health  6     0s
+
+
+
+==> v1/Service
+
+NAME                     TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
+
+snug-pug-redis-headless  ClusterIP  None           <none>       6379/TCP  0s
+
+snug-pug-redis-master    ClusterIP  10.110.30.183  <none>       6379/TCP  0s
+
+snug-pug-redis-slave     ClusterIP  10.100.177.21  <none>       6379/TCP  0s
+
+
+
+==> v1/StatefulSet
+
+NAME                   DESIRED  CURRENT  AGE
+
+snug-pug-redis-master  1        1        0s
+
+snug-pug-redis-slave   2        1        0s
+
+
+
+
+
+NOTES:
+
+This Helm chart is deprecated
+
+
+
+Given the `stable` deprecation timeline (https://github.com/helm/charts#deprecation-timeline), the Bitnami maintained Redis Helm chart is now located at bitnami/charts (https://github.com/bitnami/charts/).
+
+
+
+The Bitnami repository is already included in the Hubs and we will continue providing the same cadence of updates, support, etc that we've been keeping here these years. Installation instructions are very similar, just adding the _bitnami_ repo and using it during the installation (`bitnami/<chart>` instead of `stable/<chart>`)
+
+
+
+```bash
+
+$ helm repo add bitnami https://charts.bitnami.com/bitnami
+
+$ helm install my-release bitnami/<chart>           # Helm 3
+
+$ helm install --name my-release bitnami/<chart>    # Helm 2
+
+```
+
+
+
+To update an exisiting _stable_ deployment with a chart hosted in the bitnami repository you can execute
+
+ ```bash                                                                                                                                                                                                                                                                                                                                                                    $ helm
+
+ repo add bitnami https://charts.bitnami.com/bitnami
+
+  $ helm upgrade my-release bitnami/<chart>
+
+  ```
+
+
+
+  Issues and PRs related to the chart itself will be redirected to `bitnami/charts` GitHub repository. In the same way, we'll be happy to answer questions related to this migration process in this issue (https://github.com/helm/charts/issues/20969) created as a common place for discussion.
+
+
+
+** Please be patient while the chart is being deployed **
+
+Redis can be accessed via port 6379 on the following DNS names from within your cluster:
+
+
+
+snug-pug-redis-master.default.svc.cluster.local for read/write operations
+
+snug-pug-redis-slave.default.svc.cluster.local for read-only operations
+
+
+
+
+
+To get your password run:
+
+
+
+    export REDIS_PASSWORD=$(kubectl get secret --namespace default snug-pug-redis -o jsonpath="{.data.redis-password}" | base64 --decode)
+
+
+
+To connect to your Redis server:
+
+
+
+1. Run a Redis pod that you can use as a client:
+
+
+
+   kubectl run --namespace default snug-pug-redis-client --rm --tty -i --restart='Never' \
+
+    --env REDIS_PASSWORD=$REDIS_PASSWORD \
+
+   --image docker.io/bitnami/redis:5.0.7-debian-10-r32 -- bash
+
+
+
+2. Connect using the Redis CLI:
+
+   redis-cli -h snug-pug-redis-master -a $REDIS_PASSWORD
+
+   redis-cli -h snug-pug-redis-slave -a $REDIS_PASSWORD
+
+
+
+To connect to your database from outside the cluster execute the following commands:
+
+
+
+    kubectl port-forward --namespace default svc/snug-pug-redis-master 6379:6379 &
+
+    redis-cli -h 127.0.0.1 -p 6379 -a $REDIS_PASSWORD
+
+

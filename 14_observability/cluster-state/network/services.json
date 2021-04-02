@@ -1,0 +1,483 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484385"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "webapp1-clusterip-svc",
+                "namespace": "network",
+                "uid": "45aedec6-dddd-4e3d-a062-a57c7236fdb3",
+                "resourceVersion": "147180",
+                "creationTimestamp": "2021-03-15T10:47:58Z",
+                "labels": {
+                    "app": "webapp1-clusterip"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1-clusterip\"},\"name\":\"webapp1-clusterip-svc\",\"namespace\":\"network\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"app\":\"webapp1-clusterip\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T10:47:58Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1-clusterip"
+                },
+                "clusterIP": "10.43.167.42",
+                "clusterIPs": [
+                    "10.43.167.42"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp1-clusterip-targetport-svc",
+                "namespace": "network",
+                "uid": "fb1b3620-6290-4753-8077-ec284a0c1374",
+                "resourceVersion": "147850",
+                "creationTimestamp": "2021-03-15T11:02:51Z",
+                "labels": {
+                    "app": "webapp1-clusterip-targetport"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1-clusterip-targetport\"},\"name\":\"webapp1-clusterip-targetport-svc\",\"namespace\":\"network\"},\"spec\":{\"ports\":[{\"port\":8080,\"targetPort\":80}],\"selector\":{\"app\":\"webapp1-clusterip-targetport\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T11:02:51Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":8080,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 8080,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1-clusterip-targetport"
+                },
+                "clusterIP": "10.43.181.184",
+                "clusterIPs": [
+                    "10.43.181.184"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp1-nodeport-svc",
+                "namespace": "network",
+                "uid": "3f795e67-58dc-4adf-9d64-f1255fa65db0",
+                "resourceVersion": "148620",
+                "creationTimestamp": "2021-03-15T11:20:03Z",
+                "labels": {
+                    "app": "webapp1-nodeport"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1-nodeport\"},\"name\":\"webapp1-nodeport-svc\",\"namespace\":\"network\"},\"spec\":{\"ports\":[{\"nodePort\":30005,\"port\":80}],\"selector\":{\"app\":\"webapp1-nodeport\"},\"type\":\"NodePort\"}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T11:20:03Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:nodePort": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30005
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1-nodeport"
+                },
+                "clusterIP": "10.43.213.193",
+                "clusterIPs": [
+                    "10.43.213.193"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp1-externalip-svc",
+                "namespace": "network",
+                "uid": "2f2104b4-0dac-4b65-8e9d-4742b368a438",
+                "resourceVersion": "149152",
+                "creationTimestamp": "2021-03-15T11:29:19Z",
+                "labels": {
+                    "app": "webapp1-externalip"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1-externalip\"},\"name\":\"webapp1-externalip-svc\",\"namespace\":\"network\"},\"spec\":{\"externalIPs\":[\"192.168.8.250\"],\"ports\":[{\"port\":90}],\"selector\":{\"app\":\"webapp1-externalip\"}}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T11:30:23Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalIPs": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":90,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 90,
+                        "targetPort": 90
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1-externalip"
+                },
+                "clusterIP": "10.43.204.205",
+                "clusterIPs": [
+                    "10.43.204.205"
+                ],
+                "type": "ClusterIP",
+                "externalIPs": [
+                    "192.168.8.250"
+                ],
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp1-loadbalancer-svc",
+                "namespace": "network",
+                "uid": "7fdc8d53-14de-45c9-9825-2c54c42fdd93",
+                "resourceVersion": "154111",
+                "creationTimestamp": "2021-03-15T14:50:08Z",
+                "labels": {
+                    "app": "webapp1-loadbalancer"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"webapp1-loadbalancer\"},\"name\":\"webapp1-loadbalancer-svc\",\"namespace\":\"network\"},\"spec\":{\"ports\":[{\"port\":80}],\"selector\":{\"app\":\"webapp1-loadbalancer\"},\"type\":\"LoadBalancer\"}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T14:50:08Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    },
+                    {
+                        "manager": "kubectl-patch",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T15:08:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:spec": {
+                                "f:externalIPs": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 32104
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1-loadbalancer"
+                },
+                "clusterIP": "10.43.110.222",
+                "clusterIPs": [
+                    "10.43.110.222"
+                ],
+                "type": "LoadBalancer",
+                "externalIPs": [
+                    "192.168.8.250"
+                ],
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "alpine-svc",
+                "namespace": "network",
+                "uid": "73a14b4b-c591-4095-aca9-3cf0a1d1a82a",
+                "resourceVersion": "232946",
+                "creationTimestamp": "2021-03-18T10:41:34Z",
+                "labels": {
+                    "app": "alpine"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"alpine\"},\"name\":\"alpine-svc\",\"namespace\":\"network\"},\"spec\":{\"ports\":[{\"nodePort\":30009,\"port\":80}],\"selector\":{\"app\":\"alpine\"},\"type\":\"NodePort\"}}\n"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-client-side-apply",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-18T10:41:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:nodePort": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30009
+                    }
+                ],
+                "selector": {
+                    "app": "alpine"
+                },
+                "clusterIP": "10.43.42.147",
+                "clusterIPs": [
+                    "10.43.42.147"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

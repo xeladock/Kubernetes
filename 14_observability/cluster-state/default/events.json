@@ -1,0 +1,221 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484379"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "pc.166c8bed46bf07f9",
+                "namespace": "default",
+                "uid": "1716fbf5-1206-4c17-ae6e-e5f919fb0ecc",
+                "resourceVersion": "482497",
+                "creationTimestamp": "2021-03-29T06:16:46Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-29T06:16:46Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "pc",
+                "uid": "pc"
+            },
+            "reason": "FreeDiskSpaceFailed",
+            "message": "(combined from similar events): failed to garbage collect required amount of images. Wanted to free 7566837350 bytes, but freed 0 bytes",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-15T14:56:57Z",
+            "lastTimestamp": "2021-03-29T08:26:52Z",
+            "count": 1483,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "pc.166ccaafe503da6a",
+                "namespace": "default",
+                "uid": "ffc4097d-890e-4395-b3d5-a68156292382",
+                "resourceVersion": "483138",
+                "creationTimestamp": "2021-03-28T13:41:10Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-28T13:41:10Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "pc",
+                "uid": "pc"
+            },
+            "reason": "listen tcp4 192.168.8.250:8443: bind: address already in use",
+            "message": "can't open \"externalIP for kubernetes-dashboard/kubernetes-dashboard\" (192.168.8.250:8443/tcp), skipping this externalIP: listen tcp4 192.168.8.250:8443: bind: address already in use",
+            "source": {
+                "component": "kube-proxy",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-16T10:07:03Z",
+            "lastTimestamp": "2021-03-29T08:41:12Z",
+            "count": 1212,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "pc.166cce262c54c61e",
+                "namespace": "default",
+                "uid": "a4a2ecec-06fe-4fa0-a7c6-0521a3b2d179",
+                "resourceVersion": "484084",
+                "creationTimestamp": "2021-03-25T17:13:17Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-25T17:13:17Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "pc",
+                "uid": "pc"
+            },
+            "reason": "listen tcp4 192.168.8.250:443: bind: address already in use",
+            "message": "can't open \"externalIP for ingress-network/nginx-ingress:https\" (192.168.8.250:443/tcp), skipping this externalIP: listen tcp4 192.168.8.250:443: bind: address already in use",
+            "source": {
+                "component": "kube-proxy",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-16T11:10:29Z",
+            "lastTimestamp": "2021-03-29T09:02:07Z",
+            "count": 1213,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "pc.166c8c331f3c3c60",
+                "namespace": "default",
+                "uid": "0358627a-64f4-46a4-82c5-73df1dd42294",
+                "resourceVersion": "484301",
+                "creationTimestamp": "2021-03-15T15:01:57Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T15:01:57Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "pc",
+                "uid": "pc"
+            },
+            "reason": "ImageGCFailed",
+            "message": "(combined from similar events): failed to garbage collect required amount of images. Wanted to free 7607854694 bytes, but freed 0 bytes",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-15T15:01:57Z",
+            "lastTimestamp": "2021-03-29T09:06:53Z",
+            "count": 1490,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

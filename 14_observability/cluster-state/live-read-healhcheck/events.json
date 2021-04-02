@@ -1,0 +1,192 @@
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484386"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "bad-frontend-kc4pd.166d13eb861831a9",
+                "namespace": "live-read-healhcheck",
+                "uid": "46606dec-9d63-4e86-9ab6-6e201ed00cf3",
+                "resourceVersion": "482211",
+                "creationTimestamp": "2021-03-28T11:32:52Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-28T11:32:52Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:apiVersion": {},
+                                "f:fieldPath": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "live-read-healhcheck",
+                "name": "bad-frontend-kc4pd",
+                "uid": "a0c7c3f9-e270-4f3d-8a65-cad3f0dedf45",
+                "apiVersion": "v1",
+                "resourceVersion": "192046",
+                "fieldPath": "spec.containers{bad-frontend}"
+            },
+            "reason": "Unhealthy",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 500",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-17T08:29:03Z",
+            "lastTimestamp": "2021-03-29T08:20:27Z",
+            "count": 6117,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "bad-frontend-kc4pd.166d13eee243895c",
+                "namespace": "live-read-healhcheck",
+                "uid": "b8e0f144-7659-4530-988d-174ba77de7ad",
+                "resourceVersion": "483557",
+                "creationTimestamp": "2021-03-29T08:50:33Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-29T08:50:33Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:apiVersion": {},
+                                "f:fieldPath": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "live-read-healhcheck",
+                "name": "bad-frontend-kc4pd",
+                "uid": "a0c7c3f9-e270-4f3d-8a65-cad3f0dedf45",
+                "apiVersion": "v1",
+                "resourceVersion": "192046",
+                "fieldPath": "spec.containers{bad-frontend}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"katacoda/docker-http-server:unhealthy\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-17T08:29:18Z",
+            "lastTimestamp": "2021-03-29T08:50:33Z",
+            "count": 2178,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "bad-frontend-kc4pd.166d140ad3049845",
+                "namespace": "live-read-healhcheck",
+                "uid": "cb897cf7-284a-418c-9221-1bcc4177b7d9",
+                "resourceVersion": "484239",
+                "creationTimestamp": "2021-03-17T08:33:49Z",
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-17T08:33:49Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:count": {},
+                            "f:firstTimestamp": {},
+                            "f:involvedObject": {
+                                "f:apiVersion": {},
+                                "f:fieldPath": {},
+                                "f:kind": {},
+                                "f:name": {},
+                                "f:namespace": {},
+                                "f:resourceVersion": {},
+                                "f:uid": {}
+                            },
+                            "f:lastTimestamp": {},
+                            "f:message": {},
+                            "f:reason": {},
+                            "f:source": {
+                                "f:component": {},
+                                "f:host": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                ]
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "live-read-healhcheck",
+                "name": "bad-frontend-kc4pd",
+                "uid": "a0c7c3f9-e270-4f3d-8a65-cad3f0dedf45",
+                "apiVersion": "v1",
+                "resourceVersion": "192046",
+                "fieldPath": "spec.containers{bad-frontend}"
+            },
+            "reason": "BackOff",
+            "message": "Back-off restarting failed container",
+            "source": {
+                "component": "kubelet",
+                "host": "pc"
+            },
+            "firstTimestamp": "2021-03-17T08:31:18Z",
+            "lastTimestamp": "2021-03-29T09:05:35Z",
+            "count": 26412,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}

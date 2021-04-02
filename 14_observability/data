@@ -1,0 +1,12 @@
+kubectl cluster-info dump --all-namespaces --output-directory=cluster-state --output=json
+tree cluster-state
+jq .items[].status.containerStatuses[].image cluster-state/kube-system/pods.json
+jq .items[].status.containerStatuses[].image cluster-state/kube-system/pods.json
+jq '.items[].status.containerStatuses[] | [.image, .state[].startedAt]' cluster-state/default/pods.json
+
+kubectl version --short && \
+kubectl get componentstatus && \
+kubectl get nodes && \
+kubectl cluster-info
+kube exec random-logger-7878dcd496-k9b7w -n logger -- cat entrypoint.sh
+kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq

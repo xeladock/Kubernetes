@@ -1,0 +1,463 @@
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484379"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "redis-master",
+                "namespace": "default",
+                "uid": "39af303c-704e-43ae-b89f-5191ff884e65",
+                "resourceVersion": "151619",
+                "generation": 1,
+                "creationTimestamp": "2021-03-12T09:31:46Z",
+                "labels": {
+                    "name": "redis-master",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T09:31:46Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:template": {
+                                    ".": {},
+                                    "f:metadata": {
+                                        ".": {},
+                                        "f:creationTimestamp": {},
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {},
+                                            "f:namespace": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        ".": {},
+                                        "f:containers": {
+                                            ".": {},
+                                            "k:{\"name\":\"master\"}": {
+                                                ".": {},
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":6379,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T14:14:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "name": "redis-master",
+                    "namespace": "guestbook"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "redis-master",
+                            "namespace": "guestbook"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "master",
+                                "image": "redis:3.0.7-alpine",
+                                "ports": [
+                                    {
+                                        "containerPort": 6379,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "frontend",
+                "namespace": "default",
+                "uid": "a6e13adc-d572-48cd-ae34-f5cb96ed9f4e",
+                "resourceVersion": "151655",
+                "generation": 1,
+                "creationTimestamp": "2021-03-12T10:12:13Z",
+                "labels": {
+                    "name": "frontend",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T10:12:13Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:template": {
+                                    ".": {},
+                                    "f:metadata": {
+                                        ".": {},
+                                        "f:creationTimestamp": {},
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {},
+                                            "f:namespace": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        ".": {},
+                                        "f:containers": {
+                                            ".": {},
+                                            "k:{\"name\":\"php-redis\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"GET_HOSTS_FROM\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":80,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T14:14:13Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 3,
+                "selector": {
+                    "name": "frontend",
+                    "namespace": "guestbook"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "frontend",
+                            "namespace": "guestbook"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "php-redis",
+                                "image": "gcr.io/google_samples/gb-frontend:v3",
+                                "ports": [
+                                    {
+                                        "containerPort": 80,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "GET_HOSTS_FROM",
+                                        "value": "dns"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 3,
+                "fullyLabeledReplicas": 3,
+                "readyReplicas": 3,
+                "availableReplicas": 3,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "redis-slave",
+                "namespace": "default",
+                "uid": "ce93a6b2-57f7-4b9e-92bd-fec51f744688",
+                "resourceVersion": "151662",
+                "generation": 1,
+                "creationTimestamp": "2021-03-12T10:09:00Z",
+                "labels": {
+                    "name": "redis-slave",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T10:09:00Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:replicas": {},
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:template": {
+                                    ".": {},
+                                    "f:metadata": {
+                                        ".": {},
+                                        "f:creationTimestamp": {},
+                                        "f:labels": {
+                                            ".": {},
+                                            "f:name": {},
+                                            "f:namespace": {}
+                                        }
+                                    },
+                                    "f:spec": {
+                                        ".": {},
+                                        "f:containers": {
+                                            ".": {},
+                                            "k:{\"name\":\"worker\"}": {
+                                                ".": {},
+                                                "f:env": {
+                                                    ".": {},
+                                                    "k:{\"name\":\"GET_HOSTS_FROM\"}": {
+                                                        ".": {},
+                                                        "f:name": {},
+                                                        "f:value": {}
+                                                    }
+                                                },
+                                                "f:image": {},
+                                                "f:imagePullPolicy": {},
+                                                "f:name": {},
+                                                "f:ports": {
+                                                    ".": {},
+                                                    "k:{\"containerPort\":6379,\"protocol\":\"TCP\"}": {
+                                                        ".": {},
+                                                        "f:containerPort": {},
+                                                        "f:protocol": {}
+                                                    }
+                                                },
+                                                "f:resources": {},
+                                                "f:terminationMessagePath": {},
+                                                "f:terminationMessagePolicy": {}
+                                            }
+                                        },
+                                        "f:dnsPolicy": {},
+                                        "f:restartPolicy": {},
+                                        "f:schedulerName": {},
+                                        "f:securityContext": {},
+                                        "f:terminationGracePeriodSeconds": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-15T14:14:30Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:status": {
+                                "f:availableReplicas": {},
+                                "f:fullyLabeledReplicas": {},
+                                "f:observedGeneration": {},
+                                "f:readyReplicas": {},
+                                "f:replicas": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 2,
+                "selector": {
+                    "name": "redis-slave",
+                    "namespace": "guestbook"
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "name": "redis-slave",
+                            "namespace": "guestbook"
+                        }
+                    },
+                    "spec": {
+                        "containers": [
+                            {
+                                "name": "worker",
+                                "image": "gcr.io/google_samples/gb-redisslave:v1",
+                                "ports": [
+                                    {
+                                        "containerPort": 6379,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "GET_HOSTS_FROM",
+                                        "value": "dns"
+                                    }
+                                ],
+                                "resources": {},
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 2,
+                "fullyLabeledReplicas": 2,
+                "readyReplicas": 2,
+                "availableReplicas": 2,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}

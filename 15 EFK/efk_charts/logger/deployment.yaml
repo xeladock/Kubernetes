@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: logger
+  name: logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logger
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: logger
+    spec:
+      containers:
+      - image: hentex/random-logger
+        name: random-logger
+        resources: {}
+status: {}

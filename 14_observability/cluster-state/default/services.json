@@ -1,0 +1,504 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "484379"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kubernetes",
+                "namespace": "default",
+                "uid": "a999fdd9-40e8-49c4-b108-50c2ea1eddf2",
+                "resourceVersion": "189",
+                "creationTimestamp": "2021-03-10T08:47:34Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                },
+                "managedFields": [
+                    {
+                        "manager": "k3s",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T08:47:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:component": {},
+                                    "f:provider": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:clusterIP": {},
+                                "f:ipFamilyPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":443,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 6443
+                    }
+                ],
+                "clusterIP": "10.43.0.1",
+                "clusterIPs": [
+                    "10.43.0.1"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "first-deployment",
+                "namespace": "default",
+                "uid": "30bcce02-6ab0-4aac-a818-5446930fb774",
+                "resourceVersion": "6218",
+                "creationTimestamp": "2021-03-10T11:00:17Z",
+                "labels": {
+                    "app": "first-deployment"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-expose",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-10T11:00:17Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30203
+                    }
+                ],
+                "selector": {
+                    "app": "first-deployment"
+                },
+                "clusterIP": "10.43.162.170",
+                "clusterIPs": [
+                    "10.43.162.170"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "http",
+                "namespace": "default",
+                "uid": "de9d3822-5d7a-4309-8764-794e5deae64d",
+                "resourceVersion": "41519",
+                "creationTimestamp": "2021-03-11T10:57:01Z",
+                "labels": {
+                    "run": "http"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-expose",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-11T10:57:01Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:run": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalIPs": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":8000,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:run": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 8000,
+                        "targetPort": 80
+                    }
+                ],
+                "selector": {
+                    "run": "http"
+                },
+                "clusterIP": "10.43.195.130",
+                "clusterIPs": [
+                    "10.43.195.130"
+                ],
+                "type": "ClusterIP",
+                "externalIPs": [
+                    "192.168.8.250"
+                ],
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "webapp1-svc",
+                "namespace": "default",
+                "uid": "397d3b32-00e6-4538-ad29-2fbafd55d56e",
+                "resourceVersion": "62884",
+                "creationTimestamp": "2021-03-12T08:58:29Z",
+                "labels": {
+                    "app": "webapp1"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T08:58:29Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:nodePort": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:app": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30080
+                    }
+                ],
+                "selector": {
+                    "app": "webapp1"
+                },
+                "clusterIP": "10.43.253.86",
+                "clusterIPs": [
+                    "10.43.253.86"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "redis-master",
+                "namespace": "default",
+                "uid": "594df6e7-5630-4aa8-8ca7-19b694eafa1d",
+                "resourceVersion": "64893",
+                "creationTimestamp": "2021-03-12T09:45:34Z",
+                "labels": {
+                    "name": "redis-master",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T09:45:34Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 6379,
+                        "targetPort": 6379
+                    }
+                ],
+                "selector": {
+                    "name": "redis-master",
+                    "namespace": "guestbook"
+                },
+                "clusterIP": "10.43.24.184",
+                "clusterIPs": [
+                    "10.43.24.184"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "redis-slave",
+                "namespace": "default",
+                "uid": "d0b7cf33-8678-47c7-a4bf-e6f50b2a1a54",
+                "resourceVersion": "65967",
+                "creationTimestamp": "2021-03-12T10:10:22Z",
+                "labels": {
+                    "name": "redis-slave",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T10:10:22Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":6379,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 6379,
+                        "targetPort": 6379
+                    }
+                ],
+                "selector": {
+                    "name": "redis-slave",
+                    "namespace": "guestbook"
+                },
+                "clusterIP": "10.43.233.181",
+                "clusterIPs": [
+                    "10.43.233.181"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "frontend",
+                "namespace": "default",
+                "uid": "497b3d65-c0db-4f44-8e77-0de5125c5743",
+                "resourceVersion": "66205",
+                "creationTimestamp": "2021-03-12T10:15:01Z",
+                "labels": {
+                    "name": "frontend",
+                    "namespace": "guestbook"
+                },
+                "managedFields": [
+                    {
+                        "manager": "kubectl-create",
+                        "operation": "Update",
+                        "apiVersion": "v1",
+                        "time": "2021-03-12T10:15:01Z",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                }
+                            },
+                            "f:spec": {
+                                "f:externalTrafficPolicy": {},
+                                "f:ports": {
+                                    ".": {},
+                                    "k:{\"port\":80,\"protocol\":\"TCP\"}": {
+                                        ".": {},
+                                        "f:nodePort": {},
+                                        "f:port": {},
+                                        "f:protocol": {},
+                                        "f:targetPort": {}
+                                    }
+                                },
+                                "f:selector": {
+                                    ".": {},
+                                    "f:name": {},
+                                    "f:namespace": {}
+                                },
+                                "f:sessionAffinity": {},
+                                "f:type": {}
+                            }
+                        }
+                    }
+                ]
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "protocol": "TCP",
+                        "port": 80,
+                        "targetPort": 80,
+                        "nodePort": 30088
+                    }
+                ],
+                "selector": {
+                    "name": "frontend",
+                    "namespace": "guestbook"
+                },
+                "clusterIP": "10.43.108.242",
+                "clusterIPs": [
+                    "10.43.108.242"
+                ],
+                "type": "NodePort",
+                "sessionAffinity": "None",
+                "externalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

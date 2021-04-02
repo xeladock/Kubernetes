@@ -1,0 +1,25 @@
+It turned out that the Moby Project has a shell script on the Moby Github which can download images from Docker Hub in a format that can be imported into Docker:
+
+download-frozen-image-v2.sh
+The usage syntax for the script is given by the following:
+
+download-frozen-image-v2.sh target_dir image[:tag][@digest] ...
+The image can then be imported with tar and docker load:
+
+tar -cC 'target_dir' . | docker load
+To verify that the script works as expected, I downloaded an Ubuntu image from Docker Hub and loaded it into Docker:
+
+user@host:~$ bash download-frozen-image-v2.sh ubuntu ubuntu:latest
+user@host:~$ tar -cC 'ubuntu' . | docker load
+user@host:~$ docker run --rm -ti ubuntu bash
+root@1dd5e62113b9:/#
+In practice I would have to first copy the data from the internet client (which does not have Docker installed) to the target/destination machine (which does have Docker installed):
+
+user@nodocker:~$ bash download-frozen-image-v2.sh ubuntu ubuntu:latest
+user@nodocker:~$ tar -C 'ubuntu' -cf 'ubuntu.tar' .
+user@nodocker:~$ scp ubuntu.tar user@hasdocker:~
+and then load and use the image on the target host:
+
+user@hasdocker:~ docker load ubuntu.tar
+user@hasdocker:~ docker run --rm -ti ubuntu bash
+root@1dd5e62113b9:/#
